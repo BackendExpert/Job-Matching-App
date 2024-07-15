@@ -4,6 +4,7 @@ import SignUp from "./components/LoginSignUpTW/SignUp";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import DashHome from "./components/Dashboard/DashHome";
+import Jobs from "./components/Jobs/Jobs";
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/SignUp" element={<SignUp /> } />
         <Route path="/Dashboard/" element={<PrivateRoute ProtectRoute={<Dashboard />} />} >
           <Route path="Home" element={<PrivateRoute ProtectRoute={<DashHome /> } /> } />
+          <Route path="Jobs" element={<PrivateRoute ProtectRoute={<Jobs />} /> } />
         </Route>
       </Routes> 
     </BrowserRouter>
