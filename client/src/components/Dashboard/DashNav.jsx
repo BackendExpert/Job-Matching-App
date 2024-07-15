@@ -1,7 +1,13 @@
 import React from 'react'
 import { BsBriefcaseFill, BsPower } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
 const DashNav = () => {
+    const navigate = useNavigate()    
+    const logout = () => {
+        localStorage.clear()
+        navigate('/')
+    }
   return (
     <div className="pt-6">
         <div className='bg-white py-4 px-8 rounded shadow-md'>
@@ -18,7 +24,7 @@ const DashNav = () => {
                 </div>
                 <div className="flex">
                     <BsPower className='h-4 w-auto text-red-500 mt-2'/>
-                    <h1 className="pt-1 text-red-400 md:block hidden">Logout</h1>
+                    <h1 className="pt-1 text-red-400 md:block hidden" onClick={logout}>Logout</h1>
                 </div>
             </div>
         </div>
