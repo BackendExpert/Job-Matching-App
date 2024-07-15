@@ -3,7 +3,7 @@ const JobFinder = require('../Models/JobFinder')
 const JobFinderController = {
     GetDataJF: async (req, res) => {
         try{
-            const UserID = req.params.UserID
+            const UserID = req.params.id
 
             const JFData = await JobFinder.findOne({ email: UserID })
 
