@@ -19,8 +19,8 @@ const Settings = () => {
         .catch(err => console.log(err))
     }, [])
 
-    const [UpdateDataCBtn, SetUpdateDataCBtn] = useState(false)
-    const [UpdateImgCBtn, SetUpdateImgCBtn] = useState(false)
+    const [UpdateDataBtn, SetUpdateDataBtn] = useState(false)
+    const [UpdateImgBtn, SetUpdateImgBtn] = useState(false)
     
     
 
