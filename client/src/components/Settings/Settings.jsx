@@ -16,7 +16,10 @@ const Settings = () => {
         
                 <div className="my-4">
                     <div className="flex">
-                        <img src={MyImg} alt="" className="h-40 w-full" />
+                        <img src={MyImg} alt="" className="h-44 w-auto rounded shadow-md" />
+                        <div className="ml-4">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores animi unde ipsa, praesentium illum dolorem soluta alias hic quibusdam! Porro praesentium et odit ullam, neque expedita possimus exercitationem enim harum?
+                        </div>
                     </div>
                 </div>
             </div>
