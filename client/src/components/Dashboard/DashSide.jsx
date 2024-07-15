@@ -20,7 +20,7 @@ const DashSide = () => {
     };
 
   return (
-    <div className='bg-white mt-4 py-2 px-8 md:w-56 rounded w-full'>
+    <div className='bg-white mt-4 py-2 px-8 md:w-56 rounded w-full shadow-md'>
         <button className="md:hidden fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold" onClick={toggleSidebar}>
             {
                 !isOpen ? <BsList /> : <BsX />
