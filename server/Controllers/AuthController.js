@@ -33,9 +33,13 @@ const AuthController = {
                 if(ResultUser) {
                     const NewJobFInder = new JobFinder({
                         username: username,
-                        email: email
+                        email: email,
+                        mobile: '',
+                        Address: '',
+                        dob: '',
+                        image: '',
+                        cv: ''
                     })
-
                     const ResultJF = NewJobFInder.save()
 
                     if(ResultJF){
