@@ -2,6 +2,7 @@ import React from 'react'
 import MyImg from '../../assets/file.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
+import { BsImage, BsPen } from 'react-icons/bs';
 
 const Settings = () => {
     const navigate = useNavigate()
@@ -15,15 +16,47 @@ const Settings = () => {
                 <hr  className='py-2'/>
         
                 <div className="my-4">
-                    <div className="flex">
+                    <h1 className="">Personal Data</h1>
+                    <hr className='pb-4'/>
+                    <div className="md:flex">
                         <img src={MyImg} alt="" className="h-44 w-auto rounded-xl shadow-md" />
-                        <div className="ml-4">
+                        <div className="ml-4 md:mt-0 mt-4">
                             <table>
                                 <tr>
-                                    <th><p className="text-xl text-gray-600">Username</p></th>
-                                    <td>jehan</td>
+                                    <th><p className="text-gray-600 text-left">Username</p></th>
+                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p className="text-gray-600 text-left">Email</p></th>
+                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p className="text-gray-600 text-left">Mobile</p></th>
+                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p className="text-gray-600 text-left">Address</p></th>
+                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p className="text-gray-600 text-left">Date of Birth</p></th>
+                                    <td className='pl-4'><p className="">: Jehan</p></td>
                                 </tr>
                             </table>
+                            <div className="flex">
+                                <a href="" className='pl-2'>
+                                    <button className='my-1 flex bg-blue-500 text-white py-2 px-4 rounded shadow-md'>
+                                        <BsPen />
+                                        <span className='pl-2'>Update</span>
+                                    </button>
+                                </a>
+                                <a href="" className='pl-2'>
+                                    <button className='my-1 flex bg-blue-500 text-white py-2 px-4 rounded shadow-md'>
+                                        <BsImage />
+                                        <span className='pl-2'>Update</span>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
