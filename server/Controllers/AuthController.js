@@ -53,7 +53,9 @@ const AuthController = {
                 const chechpass = await bcrypt.compare(password, findUser.password)
 
                 if(chechpass){
+                    const token = jwt.sign({ userId: findUser._id, userEmail: findUser.email, userRole: findUser.Role }, process.env.JWT_SECRET, { expiresIn: '1h' });
                     
+                    return res.json({Status: "Success", Token:token, Result: findUser})    
                 }
                 else{
                     return res.json({ Error: "Passowrd not Match...."})
