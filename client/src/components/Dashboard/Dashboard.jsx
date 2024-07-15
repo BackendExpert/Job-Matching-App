@@ -4,6 +4,8 @@ import  secureLocalStorage  from  "react-secure-storage"
 import { Outlet } from 'react-router-dom';
 import DashNav from './DashNav';
 import DashSide from './DashSide';
+import DashFooter from './DashFooter';
+import DashHome from './DashHome';
 
 const Dashboard = () => {
     const navigate = useNavigate()
@@ -17,10 +19,13 @@ const Dashboard = () => {
         
                 <div className="md:flex">
                     <div className="">
-                        <DashSide />
+                        <DashSide />                        
+                    </div>
+                    <div className="">
+                        <DashHome />
                     </div>
                 </div>
-                <Footer />
+                <DashFooter />
             </div>
         )
     }
