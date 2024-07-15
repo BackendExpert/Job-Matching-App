@@ -131,10 +131,23 @@ const Settings = () => {
                                                         <div className="">
                                                             <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Address' />
                                                         </div>
-                                                        <div className="">
-                                                            <input type="date" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
-                                                            (Date of Birth)
-                                                        </div>
+                                                        {
+                                                            (() => {
+                                                                if(JobFinderData.dob === null){
+                                                                    return (
+                                                                        <div className="">
+                                                                            <input type="date" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                                            (Date of Birth)
+                                                                        </div>
+                                                                    )
+                                                                }
+                                                                else{
+                                                                    return (
+                                                                        <div className=""></div>
+                                                                    )
+                                                                }
+                                                            })()
+                                                        }
                                                     </div>
                                                 </form>
                                             </div>
