@@ -38,23 +38,23 @@ const Settings = () => {
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Email</p></th>
-                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                    <td className='pl-4'><p className="">: {JobFinderData.email}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Job</p></th>
-                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                    <td className='pl-4'><p className="">: {JobFinderData.job}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Mobile</p></th>
-                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                    <td className='pl-4'><p className="">: {JobFinderData.mobile}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Address</p></th>
-                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                    <td className='pl-4'><p className="">: {JobFinderData.Address}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Date of Birth</p></th>
-                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                    <td className='pl-4'><p className="">: {JobFinderData.dob}</p></td>
                                 </tr>
                             </table>
                             <div className="flex">
