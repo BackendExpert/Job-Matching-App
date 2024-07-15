@@ -43,7 +43,7 @@ const AuthController = {
         }
     },
 
-    SignIm: async(req, res) => {
+    SignIn: async(req, res) => {
         try{
             const {email, password} = req.body
 
