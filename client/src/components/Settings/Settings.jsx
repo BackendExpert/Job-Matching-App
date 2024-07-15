@@ -20,7 +20,7 @@ const Settings = () => {
                         <div className="ml-4">
                             <table>
                                 <tr>
-                                    <th>Username</th>
+                                    <th><p className="text-xl text-gray-600">Username</p></th>
                                     <td>jehan</td>
                                 </tr>
                             </table>
