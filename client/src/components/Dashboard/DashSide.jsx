@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsList, BsX } from "react-icons/bs";
+import { BsBackpack, BsList, BsX } from "react-icons/bs";
 
 const DashSide = () => {
     const navigate = useNavigate()
@@ -17,12 +17,12 @@ const DashSide = () => {
     };
 
     const SideMenu = [
-        {id: 1, name: "Menu 1", link: '#'},
-        {id: 2, name: "Menu 2", link: '#'},
-        {id: 3, name: "Menu 3", link: '#'},
-        {id: 4, name: "Menu 4", link: '#'},
-        {id: 5, name: "Menu 5", link: '#'},
-        {id: 6, name: "Menu 6", link: '#'},      
+        {id: 1, name: "Menu 1", link: '#', icon: <BsBackpack />},
+        {id: 2, name: "Menu 2", link: '#', icon: <BsBackpack />},
+        {id: 3, name: "Menu 3", link: '#', icon: <BsBackpack />},
+        {id: 4, name: "Menu 4", link: '#', icon: <BsBackpack />},
+        {id: 5, name: "Menu 5", link: '#', icon: <BsBackpack />},
+        {id: 6, name: "Menu 6", link: '#', icon: <BsBackpack />},      
     ]
 
     if(RoleUser !== null && EmailUser !== null){
@@ -46,7 +46,20 @@ const DashSide = () => {
                         <hr className='my-2'/>
         
                         <div className="">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi inventore alias blanditiis asperiores at hic ad assumenda. Assumenda iure nisi necessitatibus laboriosam ratione? Ipsum non facilis repellat labore quam aut.
+                            {
+                                SideMenu.map((menu, index) => {
+                                    return (
+                                        <a href={menu.link}>
+                                            <div className="py-2 bg-gray-200 my-2 pl-4" key={index}>
+                                                <div className="flex">
+                                                    <div className="text-xl pr-2">{menu.icon}</div>
+                                                    <p className="">{menu.name}</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
