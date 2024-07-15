@@ -16,7 +16,7 @@ const Settings = () => {
         
                 <div className="my-4">
                     <div className="flex">
-        
+                        <img src={MyImg} alt="" className="h-40 w-full" />
                     </div>
                 </div>
             </div>
