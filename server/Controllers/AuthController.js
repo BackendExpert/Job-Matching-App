@@ -31,7 +31,16 @@ const AuthController = {
                 const ResultUser = NewUser.save()
 
                 if(ResultUser) {
-                    return res.json({ Status: "Success"})
+                    const NewJobFInder = new JobFinder({
+                        username: username,
+                        email: email
+                    })
+
+                    const ResultJF = NewJobFInder.save()
+
+                    if(ResultJF){
+                        return res.json({ Status: "Success"})
+                    }
                 }
                 else{
                     return res.json({ Error: "Internal Server Error"})
