@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsBackpack, BsList, BsSpeedometer2, BsX } from "react-icons/bs";
+import { BsBackpack, BsBriefcase, BsClipboard2Data, BsGearFill, BsList, BsPersonGear, BsSpeedometer2, BsX } from "react-icons/bs";
 
 const DashSide = () => {
     const navigate = useNavigate()
@@ -18,10 +18,10 @@ const DashSide = () => {
 
     const SideMenu = [
         {id: 1, name: "Dashboard", link: 'Home', icon: <BsSpeedometer2 />},
-        {id: 2, name: "Menu 2", link: 'Jobs', icon: <BsBackpack />},
-        {id: 3, name: "Menu 3", link: '#', icon: <BsBackpack />},
-        {id: 4, name: "Menu 4", link: '#', icon: <BsBackpack />},
-        {id: 5, name: "Menu 5", link: '#', icon: <BsBackpack />},
+        {id: 2, name: "Job Applied", link: 'Jobs', icon: <BsBriefcase />},
+        {id: 3, name: "Skills", link: 'Skills', icon: <BsPersonGear />},
+        {id: 4, name: "Projects", link: 'Projects', icon: <BsClipboard2Data />},
+        {id: 5, name: "Settings", link: 'Settings', icon: <BsGearFill />},
         {id: 6, name: "Menu 6", link: '#', icon: <BsBackpack />},      
     ]
 
@@ -50,7 +50,7 @@ const DashSide = () => {
                                 SideMenu.map((menu, index) => {
                                     return (
                                         <a href={menu.link}>
-                                            <div className="py-2 bg-gray-200 my-2 pl-4 rounded" key={index}>
+                                            <div className="duration-500 py-2 hover:bg-gray-200 my-2 pl-4 rounded text-blue-500 font-semibold" key={index}>
                                                 <div className="flex">
                                                     <div className="text-xl pr-2">{menu.icon}</div>
                                                     <p className="">{menu.name}</p>
