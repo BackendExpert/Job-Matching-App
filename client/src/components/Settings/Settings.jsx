@@ -72,13 +72,13 @@ const Settings = () => {
                                 </tr>
                             </table>
                             <div className="flex">
-                                <a href="" className='pl-2'>
+                                <a href="#UpdateData" className='pl-2' onClick={() => UpdateMyData(EmailUser)}>
                                     <button className='my-1 flex bg-blue-500 text-white py-2 px-4 rounded shadow-md'>
                                         <BsPen />
                                         <span className='pl-2'>Update</span>
                                     </button>
                                 </a>
-                                <a href="" className='pl-2'>
+                                <a href="#UpdateImg" className='pl-2' onClick={() => UpdateMyImg(EmailUser)}>
                                     <button className='my-1 flex bg-blue-500 text-white py-2 px-4 rounded shadow-md'>
                                         <BsImage />
                                         <span className='pl-2'>Update</span>
