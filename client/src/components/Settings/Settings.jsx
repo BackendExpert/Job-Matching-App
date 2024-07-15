@@ -73,6 +73,10 @@ const Settings = () => {
                                     <td className='pl-4'><p className="">: {JobFinderData.email}</p></td>
                                 </tr>
                                 <tr>
+                                    <th><p className="text-gray-600 text-left">Name</p></th>
+                                    <td className='pl-4'><p className="">:  {JobFinderData.fname} {JobFinderData.lname}</p></td>
+                                </tr>
+                                <tr>
                                     <th><p className="text-gray-600 text-left">Job</p></th>
                                     <td className='pl-4'><p className="">: {JobFinderData.job}</p></td>
                                 </tr>
@@ -122,6 +126,12 @@ const Settings = () => {
                                             <div className="my-2">
                                                 <form method="post">
                                                     <div className="md:grid grid-cols-2 gap-4">
+                                                        <div className="">
+                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter First Name' />
+                                                        </div>
+                                                        <div className="">
+                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Last Name' />
+                                                        </div>
                                                         <div className="">
                                                             <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
                                                         </div>
