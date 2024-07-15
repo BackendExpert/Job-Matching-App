@@ -29,7 +29,21 @@ const Settings = () => {
                     <h1 className="">Personal Data</h1>
                     <hr className='pb-4'/>
                     <div className="md:flex">
-                        <img src={MyImg} alt="" className="h-44 w-auto rounded-xl shadow-md" />
+                        {
+                            (() => {
+                                if(JobFinderData.image === ''){
+                                    return (
+                                        <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" alt="" className="h-44 w-auto rounded-xl" />
+                                    )
+                                }
+                                else{
+                                    return (
+                                        <div className="">Image have</div>
+                                    )
+                                }
+                            })()
+                        }
+                        
                         <div className="ml-4 md:mt-0 mt-4">
                             <table>
                                 <tr>
