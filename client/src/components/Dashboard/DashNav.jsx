@@ -22,7 +22,7 @@ const DashNav = () => {
                         <h1 className="text-xl pt-1 pl-2 font-semibold text-orange-400">Job Finder</h1>
                     </div>
                 </div>
-                <div className="flex">
+                <div className="flex cursor-pointer">
                     <BsPower className='h-4 w-auto text-red-500 mt-2'/>
                     <h1 className="pt-1 text-red-400 md:block hidden" onClick={logout}>Logout</h1>
                 </div>
