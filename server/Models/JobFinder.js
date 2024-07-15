@@ -23,11 +23,9 @@ const JobFinderSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        required: true,
     },
     cv: {
         type: String,
-        required: true,
     }
 })
 
