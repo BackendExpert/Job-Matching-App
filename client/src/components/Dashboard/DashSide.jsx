@@ -17,7 +17,7 @@ const DashSide = () => {
     };
 
     const SideMenu = [
-        {id: 1, name: "Menu 1", link: '#', icon: <BsBackpack />},
+        {id: 1, name: "Menu 1", link: 'Home', icon: <BsBackpack />},
         {id: 2, name: "Menu 2", link: '#', icon: <BsBackpack />},
         {id: 3, name: "Menu 3", link: '#', icon: <BsBackpack />},
         {id: 4, name: "Menu 4", link: '#', icon: <BsBackpack />},
