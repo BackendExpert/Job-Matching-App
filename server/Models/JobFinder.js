@@ -11,6 +11,9 @@ const JobFinderSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    job: {
+        type: String,
+    },
     mobile: {
         type: String,
     },
