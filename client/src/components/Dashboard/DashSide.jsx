@@ -3,9 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import { BsList, BsX } from "react-icons/bs";
 
-
-
-
 const DashSide = () => {
     const navigate = useNavigate()
     //curent login user
@@ -18,6 +15,15 @@ const DashSide = () => {
     const toggleSidebar = () => {
       setIsOpen(!isOpen);
     };
+
+    const SideMenu = [
+        {id: 1, name: "Menu 1", link: '#'},
+        {id: 2, name: "Menu 2", link: '#'},
+        {id: 3, name: "Menu 3", link: '#'},
+        {id: 4, name: "Menu 4", link: '#'},
+        {id: 5, name: "Menu 5", link: '#'},
+        {id: 6, name: "Menu 6", link: '#'},      
+    ]
 
     if(RoleUser !== null && EmailUser !== null){
         return (
