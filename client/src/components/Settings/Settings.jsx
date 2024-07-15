@@ -85,9 +85,14 @@ const Settings = () => {
                                     </button>
                                 </a>
                             </div>
-
-                            <div className="" id="UpdateData"></div>
-                            <div className="" id="UpdateImg"></div>
+                        </div>
+                    </div>
+                    <div className="">
+                        <div className="" id="UpdateData">
+                            <h1 className="text-xl text-gray-500">Update Personal Data</h1>
+                        </div>
+                        <div className="" id="UpdateImg">
+                            <h1 className="text-xl text-gray-500">Update Image</h1>
                         </div>
                     </div>
                 </div>
