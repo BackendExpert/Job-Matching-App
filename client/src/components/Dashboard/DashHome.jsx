@@ -25,7 +25,7 @@ const DashHome = () => {
           {
             JobFinderDashData.map((jobdata, index) => {
               return (
-                <div key={index} className={`${jobdata.bgColor} py-8 px-2 rounded text-white shadow-md`}>
+                <div key={index} className={`${jobdata.bgColor} py-8 px-2 rounded text-white shadow-md md:my-0 my-2`}>
                   <div className="flex justify-between pr-4">
                     <div className="pl-4">
                       <p className="text-3xl">{jobdata.value}</p>
