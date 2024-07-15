@@ -13,7 +13,6 @@ const JobFinderSchema = new mongoose.Schema({
     },
     mobile: {
         type: String,
-        required: true
     },
     Address: {
         type: String,
