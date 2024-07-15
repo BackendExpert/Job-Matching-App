@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import  secureLocalStorage  from  "react-secure-storage"
 import { Link, useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
-import { BsBackpack2 } from 'react-icons/bs';
+import { BsBackpack2, BsBagCheckFill, BsBriefcaseFill, BsBuildingFill, BsUiChecks } from 'react-icons/bs';
 
 const DashHome = () => {
   const navigate = useNavigate()
@@ -10,10 +10,10 @@ const DashHome = () => {
   const RoleUser = secureLocalStorage.getItem("Login2");
 
   const JobFinderDashData = [
-    {id: 1, name: "Jobs", icon: <BsBackpack2 />, value: <CountUp end={20}/>, bgColor: 'bg-green-500'},
-    {id: 2, name: "Jobs", icon: <BsBackpack2 />, value: <CountUp end={20}/>, bgColor: 'bg-orange-500'},
-    {id: 3, name: "Jobs", icon: <BsBackpack2 />, value: <CountUp end={20}/>, bgColor: 'bg-purple-500'},
-    {id: 4, name: "Jobs", icon: <BsBackpack2 />, value: <CountUp end={20}/>, bgColor: 'bg-blue-500'},
+    {id: 1, name: "Jobs", icon: <BsBriefcaseFill />, value: <CountUp end={20}/>, bgColor: 'bg-green-500'},
+    {id: 2, name: "Jobs Applied", icon: <BsBagCheckFill />, value: <CountUp end={20}/>, bgColor: 'bg-orange-500'},
+    {id: 3, name: "Job Match", icon: <BsUiChecks />, value: <CountUp end={20}/>, bgColor: 'bg-purple-500'},
+    {id: 4, name: "Companies", icon: <BsBuildingFill />, value: <CountUp end={20}/>, bgColor: 'bg-blue-500'},
   ]
   
   if(RoleUser !== null && EmailUser !== null){
@@ -25,14 +25,14 @@ const DashHome = () => {
           {
             JobFinderDashData.map((jobdata, index) => {
               return (
-                <div key={index} className={`${jobdata.bgColor} py-8 px-2 rounded text-white`}>
-                  <div className="flex">
-                    <div className="">
-                      {jobdata.icon}
+                <div key={index} className={`${jobdata.bgColor} py-8 px-2 rounded text-white shadow-md`}>
+                  <div className="flex justify-between pr-4">
+                    <div className="pl-4">
+                      <p className="text-3xl">{jobdata.value}</p>
+                      <p className="">{jobdata.name}</p>
                     </div>
                     <div className="">
-                      <p className="">{jobdata.value}</p>
-                      <p className="">{jobdata.name}</p>
+                      <p className="text-4xl">{jobdata.icon}</p>
                     </div>
                   </div>
                 </div>
