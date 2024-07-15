@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import MyImg from '../../assets/file.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsImage, BsPen } from 'react-icons/bs';
+import { BsImage, BsPen, BsXCircleFill } from 'react-icons/bs';
 import axios from 'axios';
 
 const Settings = () => {
@@ -101,12 +101,36 @@ const Settings = () => {
                         </div>
                     </div>
                     <div className="">
-                        <div className="" id="UpdateData">
-                            <h1 className="text-xl text-gray-500">Update Personal Data</h1>
-                        </div>
-                        <div className="" id="UpdateImg">
-                            <h1 className="text-xl text-gray-500">Update Image</h1>
-                        </div>
+                        {
+                            (() => {
+                                if(UpdateDataBtn === true && UpdateImgBtn == false){
+                                    return (
+                                        <div className="" id="UpdateData">
+                                            <hr className='mt-2'/>
+                                            <div className="flex justify-between pt-2">
+                                                <h1 className="text-gray-500">Update Personal Data</h1>
+                                                <div className="cursor-pointer text-red-500">
+                                                    <BsXCircleFill className='h-6 w-auto'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                                else if(UpdateDataBtn === false && UpdateImgBtn == true){
+                                    return (
+                                        <div className="" id="UpdateImg">
+                                            <hr className='mt-2'/>
+                                            <div className="flex justify-between pt-2">
+                                                <h1 className="text-gray-500">Update Image</h1>
+                                                <div className="cursor-pointer text-red-500">
+                                                    <BsXCircleFill className='h-6 w-auto'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            })()
+                        }
                     </div>
                 </div>
             </div>
