@@ -11,6 +11,12 @@ const JobFinderSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    fname: {
+        type: String,
+    },
+    lnmae: {
+        type: String,
+    },
     job: {
         type: String,
     },

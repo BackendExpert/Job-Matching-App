@@ -147,7 +147,10 @@ const Settings = () => {
                                                                     )
                                                                 }
                                                             })()
-                                                        }
+                                                        }                                                        
+                                                    </div>
+                                                    <div className="">
+                                                        <button type="submit" className='bg-green-500 text-white py-2 px-4 rounded shadow-md'>Update Date</button>
                                                     </div>
                                                 </form>
                                             </div>

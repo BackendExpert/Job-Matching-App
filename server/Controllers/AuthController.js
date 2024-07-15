@@ -34,6 +34,8 @@ const AuthController = {
                     const NewJobFInder = new JobFinder({
                         username: username,
                         email: email,
+                        fname: '',
+                        lname: '',
                         job: '',
                         mobile: '',
                         Address: '',
