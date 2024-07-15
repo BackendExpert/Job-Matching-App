@@ -19,6 +19,11 @@ const Settings = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const [UpdateDataCBtn, SetUpdateDataCBtn] = useState(false)
+    const [UpdateImgCBtn, SetUpdateImgCBtn] = useState(false)
+    
+
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='bg-white py-4 px-6 shadow-md rounded'>
