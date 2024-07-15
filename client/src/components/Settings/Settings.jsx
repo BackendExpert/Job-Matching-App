@@ -32,6 +32,11 @@ const Settings = () => {
         SetUpdateImgBtn(true)
     }
 
+    const headleClose = () => {
+        SetUpdateDataBtn(false)
+        SetUpdateImgBtn(false)
+    }
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='bg-white py-4 px-6 shadow-md rounded'>
@@ -109,7 +114,7 @@ const Settings = () => {
                                             <hr className='mt-2'/>
                                             <div className="flex justify-between pt-2">
                                                 <h1 className="text-gray-500">Update Personal Data</h1>
-                                                <div className="cursor-pointer text-red-500">
+                                                <div className="cursor-pointer text-red-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
                                             </div>
@@ -122,7 +127,7 @@ const Settings = () => {
                                             <hr className='mt-2'/>
                                             <div className="flex justify-between pt-2">
                                                 <h1 className="text-gray-500">Update Image</h1>
-                                                <div className="cursor-pointer text-red-500">
+                                                <div className="cursor-pointer text-red-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
                                             </div>
