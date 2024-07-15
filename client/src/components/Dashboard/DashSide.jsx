@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsBackpack, BsList, BsX } from "react-icons/bs";
+import { BsBackpack, BsList, BsSpeedometer2, BsX } from "react-icons/bs";
 
 const DashSide = () => {
     const navigate = useNavigate()
@@ -17,7 +17,7 @@ const DashSide = () => {
     };
 
     const SideMenu = [
-        {id: 1, name: "Menu 1", link: 'Home', icon: <BsBackpack />},
+        {id: 1, name: "Dashboard", link: 'Home', icon: <BsSpeedometer2 />},
         {id: 2, name: "Menu 2", link: 'Jobs', icon: <BsBackpack />},
         {id: 3, name: "Menu 3", link: '#', icon: <BsBackpack />},
         {id: 4, name: "Menu 4", link: '#', icon: <BsBackpack />},
