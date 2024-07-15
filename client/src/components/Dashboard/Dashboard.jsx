@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom';
 import DashNav from './DashNav';
 import DashSide from './DashSide';
 import DashFooter from './DashFooter';
-import DashHome from './DashHome';
 
 const Dashboard = () => {
     const navigate = useNavigate()
@@ -14,7 +13,7 @@ const Dashboard = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className="bg-gradient-to-br from-purple-600 to-blue-600 w-full min-h-screen md:px-40 px-4">
+            <div className="bg-gradient-to-br from-gray-300 to-gray-200 w-full min-h-screen md:px-32 px-4">
                 <DashNav />
         
                 <div className="md:flex">
@@ -22,7 +21,7 @@ const Dashboard = () => {
                         <DashSide />                        
                     </div>
                     <div className="">
-                        <DashHome />
+                        <Outlet />
                     </div>
                 </div>
                 <DashFooter />
