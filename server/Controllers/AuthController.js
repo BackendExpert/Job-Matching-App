@@ -41,6 +41,17 @@ const AuthController = {
         catch (err){
             console.log(err)
         }
+    },
+
+    SignIm: async(req, res) => {
+        try{
+            const {email, password} = req.body
+
+            
+        }
+        catch (err) {
+            console.log(err)
+        }
     }
 }
 
