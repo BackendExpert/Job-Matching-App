@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsBackpack, BsBriefcase, BsClipboard2Data, BsGearFill, BsList, BsPersonGear, BsSpeedometer2, BsX } from "react-icons/bs";
+import { BsBackpack, BsBagCheck, BsBriefcase, BsClipboard2Data, BsGearFill, BsList, BsPersonGear, BsSpeedometer2, BsUiChecks, BsX } from "react-icons/bs";
 
 const DashSide = () => {
     const navigate = useNavigate()
@@ -18,11 +18,12 @@ const DashSide = () => {
 
     const SideMenu = [
         {id: 1, name: "Dashboard", link: 'Home', icon: <BsSpeedometer2 />},
-        {id: 2, name: "Job Applied", link: 'Jobs', icon: <BsBriefcase />},
-        {id: 3, name: "Skills", link: 'Skills', icon: <BsPersonGear />},
-        {id: 4, name: "Projects", link: 'Projects', icon: <BsClipboard2Data />},
-        {id: 5, name: "Settings", link: 'Settings', icon: <BsGearFill />},
-        {id: 6, name: "Menu 6", link: '#', icon: <BsBackpack />},      
+        {id: 2, name: "Job", link: 'Jobs', icon: <BsBriefcase />}, 
+        {id: 3, name: "Job Match", link: 'MatchJobs', icon: <BsUiChecks />}, 
+        {id: 4, name: "Job Applied", link: 'ApplyJobs', icon: <BsBagCheck />},
+        {id: 5, name: "Skills", link: 'Skills', icon: <BsPersonGear />},
+        {id: 6, name: "Projects", link: 'Projects', icon: <BsClipboard2Data />},
+        {id: 7, name: "Settings", link: 'Settings', icon: <BsGearFill />},    
     ]
 
     if(RoleUser !== null && EmailUser !== null){
