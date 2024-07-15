@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashHome = () => {
   return (
-    <div className='bg-white py-4 px-6'>
+    <div className='bg-white py-4 px-6 shadow-md rounded'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga pariatur ipsa esse aliquid possimus natus, est odio deleniti. Dolorum quia rerum vitae facilis, dolor minus modi suscipit libero voluptas ab.
         Nulla dolor eos minus velit dicta quibusdam laudantium provident aspernatur, ab delectus obcaecati, animi quam, fuga alias molestiae odit minima deleniti natus repudiandae mollitia fugiat at ipsum? Quasi, recusandae alias!
         Quisquam, perspiciatis? Minima voluptate provident quidem error impedit eveniet quasi, aliquam aut adipisci. Officia perferendis cumque voluptate laudantium magnam a possimus, consectetur, ratione nostrum ipsum labore quisquam, est ea aliquam!
