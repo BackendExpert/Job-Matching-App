@@ -31,6 +31,10 @@ const Settings = () => {
                                     <td className='pl-4'><p className="">: Jehan</p></td>
                                 </tr>
                                 <tr>
+                                    <th><p className="text-gray-600 text-left">Job</p></th>
+                                    <td className='pl-4'><p className="">: Jehan</p></td>
+                                </tr>
+                                <tr>
                                     <th><p className="text-gray-600 text-left">Mobile</p></th>
                                     <td className='pl-4'><p className="">: Jehan</p></td>
                                 </tr>
