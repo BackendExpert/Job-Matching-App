@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import DashHome from "./components/Dashboard/DashHome";
 import Jobs from "./components/Jobs/Jobs";
+import Settings from "./components/Settings/Settings";
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/Dashboard/" element={<PrivateRoute ProtectRoute={<Dashboard />} />} >
           <Route path="Home" element={<PrivateRoute ProtectRoute={<DashHome /> } /> } />
           <Route path="Jobs" element={<PrivateRoute ProtectRoute={<Jobs />} /> } />
+          <Route path="Settings" element={<PrivateRoute ProtectRoute={<Settings />} />} />
         </Route>
       </Routes> 
     </BrowserRouter>
