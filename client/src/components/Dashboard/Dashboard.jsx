@@ -20,7 +20,7 @@ const Dashboard = () => {
                     <div className="">
                         <DashSide />                        
                     </div>
-                    <div className="w-full">
+                    <div className="my-4 ml-4 w-full h-auto">
                         <Outlet />
                     </div>
                 </div>
