@@ -20,8 +20,15 @@ const JobFinderSchema = new mongoose.Schema({
     },
     dob: {
         type: Date,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+    cv: {
+        type: String,
+        required: true,
     }
-
 })
 
 const JobFinder = mongoose.model('JobFinder', JobFinderSchema)
