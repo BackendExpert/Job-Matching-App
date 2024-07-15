@@ -50,7 +50,7 @@ const DashSide = () => {
                                 SideMenu.map((menu, index) => {
                                     return (
                                         <a href={menu.link}>
-                                            <div className="py-2 bg-gray-200 my-2 pl-4" key={index}>
+                                            <div className="py-2 bg-gray-200 my-2 pl-4 rounded" key={index}>
                                                 <div className="flex">
                                                     <div className="text-xl pr-2">{menu.icon}</div>
                                                     <p className="">{menu.name}</p>
