@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MyImg from '../../assets/file.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import { BsImage, BsPen } from 'react-icons/bs';
+import axios from 'axios';
 
 const Settings = () => {
     const navigate = useNavigate()
     const EmailUser = secureLocalStorage.getItem("Login1");
     const RoleUser = secureLocalStorage.getItem("Login2");
+
+    // get login user data
+    const [JobFinderData, SetJobFinderData] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/jobfinder/GetJFData${EmailUser}`)
+        .then(res => SetJobFinderData(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser !== null && EmailUser !== null){
         return (
