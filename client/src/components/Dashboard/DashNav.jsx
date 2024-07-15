@@ -8,7 +8,7 @@ const DashNav = () => {
             <div className="flex justify-between">
                 <div className="flex">
                     <BsBriefcaseFill className='h-8 w-auto text-purple-500'/>
-                    <h1 className="text-xl pt-1 pl-2 font-semibold text-orange-400">Job Finder</h1>
+                    <h1 className="text-xl pt-1 pl-2 font-semibold text-purple-400">Job Finder</h1>
                 </div>
                 <div className="md:block hidden">
                     <div className="flex">
