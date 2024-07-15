@@ -1,6 +1,7 @@
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const User = require('../Models/User')
+const JobFinder = require('../Models/JobFinder')
 
 const AuthController = {
     SignUp: async (req, res) => {
