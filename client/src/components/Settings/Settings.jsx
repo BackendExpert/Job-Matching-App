@@ -118,6 +118,25 @@ const Settings = () => {
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
                                             </div>
+                                            
+                                            <div className="my-2">
+                                                <form method="post">
+                                                    <div className="md:grid grid-cols-2 gap-4">
+                                                        <div className="">
+                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                        </div>
+                                                        <div className="">
+                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                        </div>
+                                                        <div className="">
+                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                        </div>
+                                                        <div className="">
+                                                            <input type="date" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     )
                                 }
