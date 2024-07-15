@@ -47,7 +47,22 @@ const AuthController = {
         try{
             const {email, password} = req.body
 
+            const findUser = await User.findOne({ email: email})
             
+            if(findUser){
+                const chechpass = await bcrypt.compare(password, findUser.password)
+
+                if(chechpass){
+                    
+                }
+                else{
+                    return res.json({ Error: "Passowrd not Match...."})
+                }
+            }
+            else{
+                return res.json({ Error: "No User Found...."})
+            }
+
         }
         catch (err) {
             console.log(err)
