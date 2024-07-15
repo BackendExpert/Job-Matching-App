@@ -22,8 +22,15 @@ const Settings = () => {
     const [UpdateDataBtn, SetUpdateDataBtn] = useState(false)
     const [UpdateImgBtn, SetUpdateImgBtn] = useState(false)
     
-    
+    const UpdateMyData = (id) => {
+        SetUpdateDataBtn(true)
+        SetUpdateImgBtn(false)
+    }
 
+    const UpdateMyImg = (id) => {
+        SetUpdateDataBtn(false)
+        SetUpdateImgBtn(true)
+    }
 
     if(RoleUser !== null && EmailUser !== null){
         return (
