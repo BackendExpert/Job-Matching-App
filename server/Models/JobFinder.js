@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const UserSchema = new mongoose.Schema({
+const JobFinderSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -21,9 +21,9 @@ const UserSchema = new mongoose.Schema({
     dob: {
         type: Date,
     }
-    
+
 })
 
-const User = mongoose.model('User', UserSchema)
+const JobFinder = mongoose.model('JobFinder', JobFinderSchema)
 
-module.exports = User
+module.exports = JobFinder
