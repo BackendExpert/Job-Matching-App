@@ -46,7 +46,17 @@ const Settings = () => {
         address: '',
         dob: '',
     })
-    
+
+    const healeJFUpdate = async (e) => {
+        e.preventDefault();
+        try{
+
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
 
     if(RoleUser !== null && EmailUser !== null){
         return (
@@ -135,7 +145,7 @@ const Settings = () => {
                                             </div>
                                             
                                             <div className="my-2">
-                                                <form method="post">
+                                                <form method="post" onSubmit={healeJFUpdate}>
                                                     <div className="md:grid grid-cols-2 gap-4">
                                                         <div className="">
                                                             <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter First Name' />
