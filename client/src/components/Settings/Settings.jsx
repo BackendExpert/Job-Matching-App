@@ -50,7 +50,16 @@ const Settings = () => {
     const healeJFUpdate = async (e) => {
         e.preventDefault();
         try{
-
+            const res = await axios.post(`http://localhost:5000/jobfinder/UpdateJFData/${EmailUser}`, jobFindeUpdate)
+            .then(res => {
+                if(res.data.Status === "Success"){
+                    alert("Personal Data Updated Successfull")
+                    window.location.reload()
+                }
+                else{
+                    alert(res.data.Error)
+                }
+            })
         }
         catch (err) {
             console.log(err)
