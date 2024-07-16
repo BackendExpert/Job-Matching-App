@@ -37,6 +37,17 @@ const Settings = () => {
         SetUpdateImgBtn(false)
     }
 
+    // update jobfinder data
+    const [jobFindeUpdate, SetjobFindeUpdate] = useState({
+        fname: '',
+        lname: '',
+        job: '',
+        mobile: '',
+        address: '',
+        dob: '',
+    })
+    
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='bg-white py-4 px-6 shadow-md rounded'>
