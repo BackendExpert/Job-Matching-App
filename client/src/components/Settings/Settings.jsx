@@ -127,27 +127,27 @@ const Settings = () => {
                                                 <form method="post">
                                                     <div className="md:grid grid-cols-2 gap-4">
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter First Name' />
+                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter First Name' />
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Last Name' />
+                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Last Name' />
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Mobile Number' />
+                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Mobile Number' />
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Address' />
+                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Address' />
                                                         </div>
                                                         {
                                                             (() => {
                                                                 if(JobFinderData.dob === null){
                                                                     return (
                                                                         <div className="">
-                                                                            <input type="date" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
-                                                                            (Date of Birth)
+                                                                            <input type="date" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' />
+                                                                            <p className="md:mb-0 mb-2">(Date of Birth)</p>
                                                                         </div>
                                                                     )
                                                                 }
