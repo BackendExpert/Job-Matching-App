@@ -51,7 +51,7 @@ const DashSide = () => {
                                 SideMenu.map((menu, index) => {
                                     return (
                                         <a href={menu.link}>
-                                            <div className="duration-500 py-2 hover:bg-blue-500 hover:text-white my-2 pl-4 rounded text-blue-500" key={index}>
+                                            <div className="duration-500 py-2 hover:bg-purple-500 hover:text-white my-2 pl-4 rounded text-purple-500" key={index}>
                                                 <div className="flex">
                                                     <div className="text-xl pr-2">{menu.icon}</div>
                                                     <p className="">{menu.name}</p>

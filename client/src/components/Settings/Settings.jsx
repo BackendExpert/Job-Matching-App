@@ -95,13 +95,13 @@ const Settings = () => {
                             </table>
                             <div className="flex">
                                 <a href="#UpdateData" className='pl-2' onClick={() => UpdateMyData(EmailUser)}>
-                                    <button className='my-1 flex bg-blue-500 text-white py-2 px-4 rounded shadow-md'>
+                                    <button className='my-1 flex bg-purple-500 text-white py-2 px-4 rounded shadow-md'>
                                         <BsPen />
                                         <span className='pl-2'>Update</span>
                                     </button>
                                 </a>
                                 <a href="#UpdateImg" className='pl-2' onClick={() => UpdateMyImg(EmailUser)}>
-                                    <button className='my-1 flex bg-blue-500 text-white py-2 px-4 rounded shadow-md'>
+                                    <button className='my-1 flex bg-purple-500 text-white py-2 px-4 rounded shadow-md'>
                                         <BsImage />
                                         <span className='pl-2'>Update</span>
                                     </button>
