@@ -118,7 +118,7 @@ const Settings = () => {
                                             <hr className='mt-2'/>
                                             <div className="flex justify-between pt-2">
                                                 <h1 className="text-gray-500">Update Personal Data</h1>
-                                                <div className="cursor-pointer text-red-500" onClick={headleClose}>
+                                                <div className="cursor-pointer text-purple-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
                                             </div>
@@ -160,7 +160,7 @@ const Settings = () => {
                                                         }                                                        
                                                     </div>
                                                     <div className="">
-                                                        <button type="submit" className='bg-green-500 text-white py-2 px-4 rounded shadow-md'>Update Date</button>
+                                                        <button type="submit" className='bg-purple-500 text-white py-2 px-4 rounded shadow-md'>Update Date</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -173,7 +173,7 @@ const Settings = () => {
                                             <hr className='mt-2'/>
                                             <div className="flex justify-between pt-2">
                                                 <h1 className="text-gray-500">Update Image</h1>
-                                                <div className="cursor-pointer text-red-500" onClick={headleClose}>
+                                                <div className="cursor-pointer text-purple-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
                                             </div>
