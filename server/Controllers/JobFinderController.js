@@ -35,7 +35,7 @@ const JobFinderController = {
 
             const updateFields = {};
             for (const [key, value] of Object.entries(req.body)) {
-              if (value !== undefined && value !== '') {
+              if (value !== undefined && value !== '' && value !== null) {
                 updateFields[key] = value;
               }
             }
