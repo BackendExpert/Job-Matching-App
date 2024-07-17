@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
 const path = require('path'); 
-
+const bodyParser = require('body-parser');
 
 const AuthRoute = require('./Routes/AuthRoute')
 const JobFinderRoute = require('./Routes/JobFinderRoute')
