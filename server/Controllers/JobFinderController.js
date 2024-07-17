@@ -22,7 +22,7 @@ const JobFinderController = {
         try{
             const EmailID = req.params.id
 
-            console.log(req.body, EmailID)
+            // console.log(req.body, EmailID)
 
             // const {
             //     fname,
@@ -40,7 +40,7 @@ const JobFinderController = {
               }
             }
 
-            console.log(updateFields)
+            // console.log(updateFields)
 
             const UpdateJF = await JobFinder.findOneAndUpdate(
                 {email: EmailID},

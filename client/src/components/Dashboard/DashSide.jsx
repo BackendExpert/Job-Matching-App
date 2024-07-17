@@ -64,8 +64,8 @@ const DashSide = () => {
                                                        
                         </div>
                         <div className="text-center text-purple-500">
-                            <h1 className='mt-4 font-semibold text-xl'>Jehan Weerasuriya</h1>
-                            <p className="text-sm">Full Stack Developer</p>
+                            <h1 className='mt-4 font-semibold text-xl'>{JobFinderData.fname} {JobFinderData.lname}</h1>
+                            <p className="text-sm">{JobFinderData.job}</p>
                         </div>
                         <hr className='my-2'/>
         
