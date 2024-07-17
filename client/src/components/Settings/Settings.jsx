@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import { BsImage, BsPen, BsXCircleFill } from 'react-icons/bs';
 import axios from 'axios';
+import NewImg from '../../../../server/uploads/1721220854625.jpg'
 
 const Settings = () => {
     const navigate = useNavigate()
@@ -17,8 +18,9 @@ const Settings = () => {
         axios.get(`http://localhost:5000/jobfinder/GetJFData/${EmailUser}`)
         .then(res => SetJobFinderData(res.data.Result))
         .catch(err => console.log(err))
-        console.log(JobFinderData.address)
     }, [])
+
+    console.log(JobFinderData)
 
     const [UpdateDataBtn, SetUpdateDataBtn] = useState(false)
     const [UpdateImgBtn, SetUpdateImgBtn] = useState(false)
@@ -118,11 +120,12 @@ const Settings = () => {
                                 }
                                 else{
                                     return (
-                                        <div className="">Image have</div>
+                                        <img src={'http://localhost:5000/' + JobFinderData.image} alt="ssssssssssssss" className="h-44 w-auto rounded-xl" />
                                     )
                                 }
                             })()
                         }
+                        
                         
                         <div className="ml-4 md:mt-0 mt-4">
                             <table>

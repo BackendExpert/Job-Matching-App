@@ -57,7 +57,7 @@ const DashSide = () => {
                                     }
                                     else if(JobFinderData.image !== ''){
                                         return (
-                                            <div className="">Image have</div>
+                                            <img src={'http://localhost:5000/' + JobFinderData.image} alt="ssssssssssssss" className="h-44 w-auto rounded-full" />
                                         )
                                     }
                                 })()
