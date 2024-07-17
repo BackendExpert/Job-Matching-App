@@ -14,6 +14,7 @@ const storage = multer.diskStorage({
     },
 });
 
+const upload = multer({ storage });
 
 router.get('/GetJFData/:id', JobFinderController.GetDataJF)
 router.post('/UpdateJFData/:id', JobFinderController.JobFinderUpdate)
