@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsBriefcaseFill, BsPower } from 'react-icons/bs'
+import { BsBellFill, BsBriefcaseFill, BsPower } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 
 const DashNav = () => {
@@ -18,8 +18,7 @@ const DashNav = () => {
                 </div>
                 <div className="md:block hidden">
                     <div className="flex">
-                        <BsBriefcaseFill className='h-8 w-auto text-purple-500'/>
-                        <h1 className="text-xl pt-1 pl-2 font-semibold text-orange-400">Job Finder</h1>
+                        <BsBellFill className='h-6 w-auto text-purple-500 pt-1 cursor-pointer'/>
                     </div>
                 </div>
                 <div className="flex cursor-pointer">
