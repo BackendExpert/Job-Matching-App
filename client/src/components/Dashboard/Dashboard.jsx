@@ -18,10 +18,6 @@ const Dashboard = () => {
         SetchatOpen(true)
     }
 
-    const headleCloseChat = () => {
-        SetchatOpen(false)
-    }
-    
     const ChatMenu = [
         {id: 1, name: 'How to Start a Company'},
         {id: 2, name: 'How Find a Job'},
@@ -29,14 +25,19 @@ const Dashboard = () => {
     ]
 
     const ChatMenuData = [
-        {id: 1, name: 'How to Start a Company'},
+        {id: 1, name: 'Click Start Company button on Dashboard'},
         {id: 2, name: 'How Find a Job'},
         {id: 3, name: 'How to add Skills or Project'},
     ]
 
-    const [MenuID, SetMenuID] = useState(false)
+    const [MenuID, SetMenuID] = useState(0)
     const headleStartChat = (id) => {
         SetMenuID(id)
+    }
+
+    const headleCloseChat = () => {
+        SetchatOpen(false)
+        SetMenuID(0)
     }
 
     if(RoleUser !== null && EmailUser !== null){
@@ -70,8 +71,8 @@ const Dashboard = () => {
                                         {
                                             ChatMenu.map((menuChat, index) => {
                                                 return (
-                                                    <div className="bg-white p-2 my-2 rounded w-full" key={index} onClick={headleStartChat(menuChat.id)}>
-                                                        <p className="text-left text-sm">{menuChat.name}</p>
+                                                    <div className="bg-purple-400 p-2 my-2 rounded w-full" key={index}>
+                                                        <p className="text-left text-white text-sm" onClick={() => headleStartChat(menuChat.id)}>{menuChat.name}</p>
                                                     </div>
                                                 )
                                             })
@@ -79,9 +80,15 @@ const Dashboard = () => {
                                     </div>
                                     <div className="">
                                         {
-                                            (() => {
-                                                if() 
-                                            })()
+                                            ChatMenuData.map((data, index) => {
+                                                if(MenuID === data.id){
+                                                    return (
+                                                        <div key={index} className="text-left bg-white text-sm mt-4 p-2 rounded shadow-md">
+                                                            {data.name}
+                                                        </div>
+                                                    )
+                                                }
+                                            }) 
                                         }
                                     </div>
                                 </div>
