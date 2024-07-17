@@ -35,7 +35,7 @@ const AuthController = {
                         username: username,
                         email: email,
                         fname: '',
-                        lname: '',
+                        lnmae: '',
                         job: '',
                         mobile: '',
                         Address: '',

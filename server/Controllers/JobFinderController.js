@@ -22,7 +22,7 @@ const JobFinderController = {
         try{
             const EmailID = req.params.id
 
-            console.log(req.body, EmailID)
+            // console.log(req.body, EmailID)
 
             // const {
             //     fname,

@@ -104,7 +104,7 @@ const Settings = () => {
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Name</p></th>
-                                    <td className='pl-4'><p className="">:  {JobFinderData.fname} {JobFinderData.lname}</p></td>
+                                    <td className='pl-4'><p className="">:  {JobFinderData.fname} {JobFinderData.lnmae}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Job</p></th>
@@ -195,7 +195,7 @@ const Settings = () => {
                                                             })()
                                                         }                                                        
                                                     </div>
-                                                    <div className="">
+                                                    <div className="mt-2">
                                                         <button type="submit" className='bg-purple-500 text-white py-2 px-4 rounded shadow-md'>Update Date</button>
                                                     </div>
                                                 </form>
