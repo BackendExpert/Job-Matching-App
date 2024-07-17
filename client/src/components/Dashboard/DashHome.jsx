@@ -3,6 +3,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import { Link, useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
 import { BsBackpack2, BsBagCheckFill, BsBriefcaseFill, BsBuildingFill, BsUiChecks } from 'react-icons/bs';
+import JobPosterImg from '../../assets/programmer.png'
 
 const DashHome = () => {
   const navigate = useNavigate()
@@ -18,27 +19,46 @@ const DashHome = () => {
   
   if(RoleUser !== null && EmailUser !== null){
     return (
-      <div className='bg-white py-4 px-6 shadow-md rounded'>
-        <h1 className="text-2xl font-semibold text-purple-500 pt-2">Dashboard</h1>
-        <hr  className='py-2'/>
-        <div className="md:grid grid-cols-4 gap-4">
-          {
-            JobFinderDashData.map((jobdata, index) => {
-              return (
-                <div key={index} className={`${jobdata.bgColor} py-8 px-2 rounded text-white shadow-md md:my-0 my-2`}>
-                  <div className="flex justify-between pr-4">
-                    <div className="pl-4">
-                      <p className="text-3xl">{jobdata.value}</p>
-                      <p className="">{jobdata.name}</p>
-                    </div>
-                    <div className="">
-                      <p className="text-4xl">{jobdata.icon}</p>
+      <div className="">
+        <div className='bg-white py-4 px-6 shadow-md rounded'>
+          <h1 className="text-2xl font-semibold text-purple-500 pt-2">Dashboard</h1>
+          <hr  className='py-2'/>
+          <div className="md:grid grid-cols-4 gap-4">
+            {
+              JobFinderDashData.map((jobdata, index) => {
+                return (
+                  <div key={index} className={`${jobdata.bgColor} py-8 px-2 rounded text-white shadow-md md:my-0 my-2`}>
+                    <div className="flex justify-between pr-4">
+                      <div className="pl-4">
+                        <p className="text-3xl">{jobdata.value}</p>
+                        <p className="">{jobdata.name}</p>
+                      </div>
+                      <div className="">
+                        <p className="text-4xl">{jobdata.icon}</p>
+                      </div>
                     </div>
                   </div>
+                )
+              })
+            }
+          </div>
+        </div>
+        <div className="md:grid grid-cols-2 gap-4">
+          <div className="bg-white py-2 px-2 my-4 shadow-md rounded">
+            <div className="md:flex md:text-left text-center md:pb-0 pb-4">
+              <div class="md:hidden w-full flex justify-center">
+                <img src={JobPosterImg} alt="" className='h-64 w-auto'/>
+              </div>
+              <img src={JobPosterImg} alt="" className='h-64 w-auto md:block hidden'/>
+              <div className="">
+                <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Job Poster</h1>
+                <p className="text-purple-500">Start Your own Comanpany here</p>
+                <div className="mt-4">
+                  <button className='bg-purple-500 text-white py-2 px-4 rounded ml-4'>Start Company</button>
                 </div>
-              )
-            })
-          }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )
