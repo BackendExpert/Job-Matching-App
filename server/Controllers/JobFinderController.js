@@ -20,7 +20,19 @@ const JobFinderController = {
     },
     JobFinderUpdate: async (req, res) => {
         try{
+            const EmailID = req.params.id
 
+            const {
+                address
+            } = req.body
+
+            const AddAddess = new JobFinder({
+                Address: address
+            })
+
+            const ResultAddress = AddAddess.save()
+
+            res.json({Status: "Success"})
         }
         catch(err){
             console.log(err)
