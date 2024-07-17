@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import DashNav from './DashNav';
 import DashSide from './DashSide';
 import DashFooter from './DashFooter';
-import { BsChatDotsFill } from 'react-icons/bs';
+import { BsChatDotsFill, BsXCircleFill } from 'react-icons/bs';
 
 const Dashboard = () => {
     const navigate = useNavigate()
@@ -16,6 +16,10 @@ const Dashboard = () => {
 
     const headleOpenChat = () => {
         SetchatOpen(true)
+    }
+
+    const headleCloseChat = () => {
+        SetchatOpen(false)
     }
     
     if(RoleUser !== null && EmailUser !== null){
@@ -32,7 +36,7 @@ const Dashboard = () => {
                         <button className="fixed bottom-6 right-8 p-3">
                             {
                                 chatOpen === true ?
-                                    <div className=""></div>
+                                    <BsXCircleFill className='h-8 w-auto text-purple-500' onClick={headleCloseChat}/>
                                 :
                                     <BsChatDotsFill className='h-8 w-auto text-purple-500' onClick={headleOpenChat}/>    
                             }
