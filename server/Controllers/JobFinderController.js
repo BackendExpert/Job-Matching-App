@@ -17,7 +17,16 @@ const JobFinderController = {
         catch (err){
             console.log(err)
         }
+    },
+    JobFinderUpdate: async (req, res) => {
+        try{
+
+        }
+        catch(err){
+            console.log(err)
+        }
     }
+
 }
 
 module.exports = JobFinderController
