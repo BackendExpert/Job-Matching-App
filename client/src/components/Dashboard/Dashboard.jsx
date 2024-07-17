@@ -13,7 +13,7 @@ const Dashboard = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className=" w-full min-h-screen md:px-32 px-4">
+            <div className=" w-full min-h-screen md:px-[5%] px-4">
                 <DashNav />        
                 <div className="md:flex">
                 <div className="circlePosition w-[990px] h-[700px] bg-purple-900 rounded-[100%] fixed  z-[-10] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[600px]"></div>
@@ -22,11 +22,12 @@ const Dashboard = () => {
                     </div>
                     <div className="my-4 md:ml-4 w-full h-auto">                  
                         <Outlet />
-                    </div>
-                    
+                        <button className="fixed bottom-6 right-8 p-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            Click Me
+                        </button>
+                    </div>                    
                 </div>
-                <DashFooter />
-                
+                <DashFooter />                
             </div>
         )
     }
