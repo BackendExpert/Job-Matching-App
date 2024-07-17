@@ -65,7 +65,8 @@ const JobFinderController = {
 
     ProfileImgUpdate: async(req, res) => {
         try{
-            
+            const UserEmail = req.params.id
+            console.log(UserEmail)
         }
         catch(err){
             console.log(err)
