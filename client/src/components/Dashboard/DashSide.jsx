@@ -64,6 +64,23 @@ const DashSide = () => {
                                                        
                         </div>
                         <div className="text-center text-purple-500">
+                            {
+                                (() => {
+                                    if(JobFinderData === ""){
+                                        return (
+                                            <div className="">
+                                                <h1 className='mt-4 font-semibold text-xl'>{JobFinderData.fname} {JobFinderData.lname}</h1>
+                                                <p className="text-sm">{JobFinderData.job}</p>
+                                            </div>
+                                        )
+                                    }
+                                    else{
+                                        return (
+                                            <div className="">{EmailUser}</div>
+                                        )
+                                    }
+                                })()
+                            }
                             <h1 className='mt-4 font-semibold text-xl'>{JobFinderData.fname} {JobFinderData.lname}</h1>
                             <p className="text-sm">{JobFinderData.job}</p>
                         </div>
