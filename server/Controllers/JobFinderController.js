@@ -22,17 +22,7 @@ const JobFinderController = {
         try{
             const EmailID = req.params.id
 
-            const {
-                address
-            } = req.body
-
-            const AddAddess = new JobFinder({
-                Address: address
-            })
-
-            const ResultAddress = AddAddess.save()
-
-            res.json({Status: "Success"})
+            console.log(req.body, EmailID)
         }
         catch(err){
             console.log(err)
