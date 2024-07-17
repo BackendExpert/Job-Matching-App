@@ -67,6 +67,37 @@ const Settings = () => {
         }
     }
 
+    // upload profile Image
+    const [ProfileImg, SetProfileImg] = useState({
+        image: ''
+    })
+
+    const headleUploadProfileImg = (e) => {
+        e.preventDefault();
+        const ImageData = new FormData();
+
+        ImageData.append("profileImg", ProfileImg.image);
+        
+        try{
+            const res = axios.post(`http://localhost:5000/jobfinder/UploadProfileImg/${EmailUser}`, ImageData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                }
+            })
+            .then(res => {
+                if(res.data.Status === "Success"){
+                    alert("Profile Image Updated Successfull")
+                    window.location.reload()
+                }
+                else{
+                    alert(res.data.Error)
+                }
+            })
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
     if(RoleUser !== null && EmailUser !== null){
         return (
@@ -215,8 +246,8 @@ const Settings = () => {
                                                 </div>
                                             </div>
                                             <div className="my-4">
-                                                <form method="post">
-                                                    <input type="file" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required/>
+                                                <form method="post" onSubmit={headleUploadProfileImg}>
+                                                    <input type="file" name="profileImg" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required/>
                                                     <div className="my-2">
                                                         <button type="submit" className="bg-purple-500 text-white py-2 px-4 rounded shadow-md">Update Profile Image</button>
                                                     </div>
