@@ -47,7 +47,7 @@ const JobFinderController = {
                 updateFields,
                 { new: true }
             )
-            console.log(UpdateJF)
+            // console.log(UpdateJF)
 
             if(UpdateJF){
                 return res.json({ Status: "Success"})

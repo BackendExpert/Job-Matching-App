@@ -12,11 +12,12 @@ const Settings = () => {
 
     // get login user data
     const [JobFinderData, SetJobFinderData] = useState([])
-
+    
     useEffect(() => {
         axios.get(`http://localhost:5000/jobfinder/GetJFData/${EmailUser}`)
         .then(res => SetJobFinderData(res.data.Result))
         .catch(err => console.log(err))
+        console.log(JobFinderData.address)
     }, [])
 
     const [UpdateDataBtn, SetUpdateDataBtn] = useState(false)
@@ -104,7 +105,7 @@ const Settings = () => {
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Name</p></th>
-                                    <td className='pl-4'><p className="">:  {JobFinderData.fname} {JobFinderData.lnmae}</p></td>
+                                    <td className='pl-4'><p className="">:  {JobFinderData.fname} {JobFinderData.lname}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Job</p></th>
@@ -116,7 +117,7 @@ const Settings = () => {
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Address</p></th>
-                                    <td className='pl-4'><p className="">: {JobFinderData.Address}</p></td>
+                                    <td className='pl-4'><p className="">: {JobFinderData.address}</p></td>
                                 </tr>
                                 <tr>
                                     <th><p className="text-gray-600 text-left">Date of Birth</p></th>
