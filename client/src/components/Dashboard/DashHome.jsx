@@ -19,7 +19,7 @@ const DashHome = () => {
   if(RoleUser !== null && EmailUser !== null){
     return (
       <div className='bg-white py-4 px-6 shadow-md rounded'>
-        <h1 className="text-2xl font-semibold text-gray-500 pt-2">Dashboard</h1>
+        <h1 className="text-2xl font-semibold text-purple-500 pt-2">Dashboard</h1>
         <hr  className='py-2'/>
         <div className="md:grid grid-cols-4 gap-4">
           {

@@ -63,7 +63,7 @@ const DashSide = () => {
                             }
                                                        
                         </div>
-                        <div className="text-center text-gray-500">
+                        <div className="text-center text-purple-500">
                             <h1 className='mt-4 font-semibold text-xl'>Jehan Weerasuriya</h1>
                             <p className="text-sm">Full Stack Developer</p>
                         </div>

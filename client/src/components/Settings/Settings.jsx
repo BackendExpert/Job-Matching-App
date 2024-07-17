@@ -70,11 +70,11 @@ const Settings = () => {
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='bg-white py-4 px-6 shadow-md rounded'>
-                <h1 className="text-2xl font-semibold text-gray-500 pt-2">Settings</h1>
+                <h1 className="text-2xl font-semibold text-purple-500 pt-2">Settings</h1>
                 <hr  className='py-2'/>
         
                 <div className="my-4">
-                    <h1 className="">Personal Data</h1>
+                    <h1 className="text-purple-500">Personal Data</h1>
                     <hr className='pb-4'/>
                     <div className="md:flex">
                         {
@@ -147,7 +147,7 @@ const Settings = () => {
                                         <div className="" id="UpdateData">
                                             <hr className='mt-2'/>
                                             <div className="flex justify-between pt-2">
-                                                <h1 className="text-gray-500">Update Personal Data</h1>
+                                                <h1 className="text-purple-500">Update Personal Data</h1>
                                                 <div className="cursor-pointer text-purple-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
@@ -208,7 +208,7 @@ const Settings = () => {
                                         <div className="" id="UpdateImg">
                                             <hr className='mt-2'/>
                                             <div className="flex justify-between pt-2">
-                                                <h1 className="text-gray-500">Update Image</h1>
+                                                <h1 className="text-purple-500">Update Image</h1>
                                                 <div className="cursor-pointer text-purple-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
