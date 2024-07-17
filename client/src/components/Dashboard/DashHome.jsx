@@ -52,7 +52,7 @@ const DashHome = () => {
               <img src={JobPosterImg} alt="" className='h-[50%] w-auto md:block hidden'/>
               <div className="">
                 <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Poster</h1>
-                <p className="text-purple-500">Start Your own Comanpany here</p>
+                <p className="text-purple-500">Start Your own Company here</p>
                 <div className="mt-4">
                   <button className='bg-purple-500 text-white py-2 px-4 rounded '>Start Company</button>
                 </div>
