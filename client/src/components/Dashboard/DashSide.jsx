@@ -51,10 +51,11 @@ const DashSide = () => {
                                 (() => {
                                     if(JobFinderData.image === ''){
                                         return (
-                                            <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" alt="" className='h-32 w-auto rounded-full' />
+                                            <img src="https://cdn-icons-png.flaticon.com/128/10813/10813372.png" alt="" className='h-32 w-auto rounded-full' />
+                                            // https://cdn-icons-png.flaticon.com/128/13098/13098372.png
                                         )
                                     }
-                                    else{
+                                    else if(JobFinderData.image !== ''){
                                         return (
                                             <div className="">Image have</div>
                                         )
@@ -64,23 +65,7 @@ const DashSide = () => {
                                                        
                         </div>
                         <div className="text-center text-purple-500">
-                            {
-                                (() => {
-                                    if(JobFinderData === ""){
-                                        return (
-                                            <div className="">
-                                                <h1 className='mt-4 font-semibold text-xl'>{JobFinderData.fname} {JobFinderData.lname}</h1>
-                                                <p className="text-sm">{JobFinderData.job}</p>
-                                            </div>
-                                        )
-                                    }
-                                    else{
-                                        return (
-                                            <div className="">{EmailUser}</div>
-                                        )
-                                    }
-                                })()
-                            }
+
                             <h1 className='mt-4 font-semibold text-xl'>{JobFinderData.fname} {JobFinderData.lname}</h1>
                             <p className="text-sm">{JobFinderData.job}</p>
                         </div>

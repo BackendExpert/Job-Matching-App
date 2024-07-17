@@ -82,7 +82,7 @@ const Settings = () => {
                             (() => {
                                 if(JobFinderData.image === ''){
                                     return (
-                                        <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" alt="" className="h-44 w-auto rounded-xl" />
+                                        <img src="https://cdn-icons-png.flaticon.com/128/10813/10813372.png" alt="" className="h-44 w-auto rounded-xl" />
                                     )
                                 }
                                 else{
