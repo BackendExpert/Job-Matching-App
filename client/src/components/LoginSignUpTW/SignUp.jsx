@@ -58,17 +58,17 @@ const SignUp = () => {
                         <form onSubmit={headleSubmit}>
                              <div className="my-2 md:mx-8">
                                 <label htmlFor="" className='text-purple-500 font-semibold'>Username : </label>
-                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-white placeholder-white" required placeholder='Enter Username'
+                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='Enter Username'
                                 onChange={e => SetSignUpData({...SignUpData, username:e.target.value})}/>
                             </div>
                             <div className="my-2 md:mx-8">
                                 <label htmlFor="" className='text-purple-500 font-semibold'>Email : </label>
-                                <input type="email" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-white placeholder-white" required placeholder='Enter Email Address'
+                                <input type="email" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='Enter Email Address'
                                 onChange={e => SetSignUpData({...SignUpData, email:e.target.value})}/>
                             </div>
                             <div className="my-2 md:mx-8">
                                 <label htmlFor="" className='text-purple-500 font-semibold'>Password : </label>
-                                <input type="password" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-white placeholder-white" required placeholder='Enter Password' 
+                                <input type="password" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='Enter Password' 
                                 onChange={e => SetSignUpData({...SignUpData, password:e.target.value})}/>
                             </div>
                             <div className="my-2 md:mx-8">
