@@ -17,5 +17,6 @@ const storage = multer.diskStorage({
 
 router.get('/GetJFData/:id', JobFinderController.GetDataJF)
 router.post('/UpdateJFData/:id', JobFinderController.JobFinderUpdate)
+router.post('/UploadProfileImg/:id',)
 
 module.exports = router
