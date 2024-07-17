@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
 import { BsBackpack2, BsBagCheckFill, BsBriefcaseFill, BsBuildingFill, BsUiChecks } from 'react-icons/bs';
 import JobPosterImg from '../../assets/programmer.png'
+import JobFind from '../../assets/lap.png'
 
 const DashHome = () => {
   const navigate = useNavigate()
