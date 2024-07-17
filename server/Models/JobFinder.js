@@ -34,6 +34,9 @@ const JobFinderSchema = new mongoose.Schema({
     },
     cv: {
         type: String,
+    },
+    createAt: {
+        type: Date,
     }
 })
 

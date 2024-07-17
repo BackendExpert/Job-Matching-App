@@ -32,6 +32,18 @@ const JobFinderController = {
                 address,
                 dob
             } = req.body
+
+            const UpdateJF = await JobFinder.findOneAndUpdate(
+                {email: EmailID},
+                { $set: {
+                    fname: fname,
+                    lnmae: lname,
+                    job: job,
+                    mobile: mobile,
+                    Address: address
+                }},
+                { new: true }
+            )
         }
         catch(err){
             console.log(err)
