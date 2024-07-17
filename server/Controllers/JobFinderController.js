@@ -24,26 +24,34 @@ const JobFinderController = {
 
             console.log(req.body, EmailID)
 
-            const {
-                fname,
-                lname,
-                job,
-                mobile,
-                address,
-                dob
-            } = req.body
+            // const {
+            //     fname,
+            //     lname,
+            //     job,
+            //     mobile,
+            //     address,
+            //     dob
+            // } = req.body
+
+            const updateFields = {};
+            for (const [key, value] of Object.entries(req.body)) {
+              if (value !== undefined && value !== '') {
+                updateFields[key] = value;
+              }
+            }
 
             const UpdateJF = await JobFinder.findOneAndUpdate(
                 {email: EmailID},
-                { $set: {
-                    fname: fname,
-                    lnmae: lname,
-                    job: job,
-                    mobile: mobile,
-                    Address: address
-                }},
+                updateFields,
                 { new: true }
             )
+
+            if(UpdateJF){
+                return res.json({ Status: "Success"})
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
         }
         catch(err){
             console.log(err)
