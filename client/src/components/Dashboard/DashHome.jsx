@@ -49,12 +49,12 @@ const DashHome = () => {
               <div class="md:hidden w-full flex justify-center">
                 <img src={JobPosterImg} alt="" className='h-64 w-auto'/>
               </div>
-              <img src={JobPosterImg} alt="" className='h-64 w-auto md:block hidden'/>
+              <img src={JobPosterImg} alt="" className='h-[50%] w-auto md:block hidden'/>
               <div className="">
-                <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Job Poster</h1>
+                <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Poster</h1>
                 <p className="text-purple-500">Start Your own Comanpany here</p>
                 <div className="mt-4">
-                  <button className='bg-purple-500 text-white py-2 px-4 rounded ml-4'>Start Company</button>
+                  <button className='bg-purple-500 text-white py-2 px-4 rounded '>Start Company</button>
                 </div>
               </div>
             </div>
