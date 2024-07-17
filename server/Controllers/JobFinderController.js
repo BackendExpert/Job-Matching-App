@@ -69,7 +69,23 @@ const JobFinderController = {
             const UserEmail = req.params.id
             const image  = req.file.path;
 
-            console.log(UserEmail, image)
+            // console.log(UserEmail, image)
+            const UpdateImg = await JobFinder.findOneAndUpdate(
+                { email: UserEmail },
+                {
+                    $set: {
+                        image: image
+                    }
+                },
+                { new: true }
+            )
+
+            if(UpdateImg){
+                return res.json({ Status: "Success" })
+            }
+            else{
+                return res.json({ Error: 'Internal Server Error'})
+            }
         }
         catch(err){
             console.log(err)
