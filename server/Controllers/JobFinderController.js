@@ -61,6 +61,15 @@ const JobFinderController = {
         catch(err){
             console.log(err)
         }
+    },
+
+    ProfileImgUpdate: async(req, res) => {
+        try{
+
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 
 }
