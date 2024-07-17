@@ -14,7 +14,7 @@ const JobFinderSchema = new mongoose.Schema({
     fname: {
         type: String,
     },
-    lnmae: {
+    lname: {
         type: String,
     },
     job: {
@@ -23,7 +23,7 @@ const JobFinderSchema = new mongoose.Schema({
     mobile: {
         type: String,
     },
-    Address: {
+    address: {
         type: String,
     },
     dob: {

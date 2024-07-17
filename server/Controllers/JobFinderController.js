@@ -22,7 +22,7 @@ const JobFinderController = {
         try{
             const EmailID = req.params.id
 
-            // console.log(req.body, EmailID)
+            console.log(req.body, EmailID)
 
             // const {
             //     fname,
@@ -35,16 +35,19 @@ const JobFinderController = {
 
             const updateFields = {};
             for (const [key, value] of Object.entries(req.body)) {
-              if (value !== undefined && value !== '' && value !== null) {
+              if (value !== undefined && value !== "" && value !== null) {
                 updateFields[key] = value;
               }
             }
+
+            console.log(updateFields)
 
             const UpdateJF = await JobFinder.findOneAndUpdate(
                 {email: EmailID},
                 updateFields,
                 { new: true }
             )
+            console.log(UpdateJF)
 
             if(UpdateJF){
                 return res.json({ Status: "Success"})
