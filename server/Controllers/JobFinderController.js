@@ -1,4 +1,5 @@
 const JobFinder = require('../Models/JobFinder')
+const path = require('path')
 
 const JobFinderController = {
     GetDataJF: async (req, res) => {
@@ -66,7 +67,9 @@ const JobFinderController = {
     ProfileImgUpdate: async(req, res) => {
         try{
             const UserEmail = req.params.id
-            console.log(UserEmail)
+            const image  = req.file.path;
+
+            console.log(UserEmail, image)
         }
         catch(err){
             console.log(err)

@@ -76,7 +76,7 @@ const Settings = () => {
         e.preventDefault();
         const ImageData = new FormData();
 
-        ImageData.append("profileImg", ProfileImg.image);
+        ImageData.append("image", ProfileImg.image);
         
         try{
             const res = axios.post(`http://localhost:5000/jobfinder/UploadProfileImg/${EmailUser}`, ImageData, {
@@ -247,7 +247,8 @@ const Settings = () => {
                                             </div>
                                             <div className="my-4">
                                                 <form method="post" onSubmit={headleUploadProfileImg}>
-                                                    <input type="file" name="profileImg" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required/>
+                                                    <input type="file" name="image" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required
+                                                    onChange={e => SetProfileImg({...ProfileImg, image:e.target.files[0]})}/>
                                                     <div className="my-2">
                                                         <button type="submit" className="bg-purple-500 text-white py-2 px-4 rounded shadow-md">Update Profile Image</button>
                                                     </div>
