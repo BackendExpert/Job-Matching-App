@@ -29,6 +29,8 @@ const JobFinderController = {
             //     lname,
             //     job,
             //     mobile,
+
+            
             //     address,
             //     dob
             // } = req.body
