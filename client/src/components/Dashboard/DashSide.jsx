@@ -38,7 +38,7 @@ const DashSide = () => {
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className=''>
-                <button className="md:hidden fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold" onClick={toggleSidebar}>
+                <button className="md:hidden fixed top-4 right-4 z-50 bg-purple-600 text-white p-2 rounded font-semibold" onClick={toggleSidebar}>
                     {
                         !isOpen ? <BsList /> : <BsX />
                     }
