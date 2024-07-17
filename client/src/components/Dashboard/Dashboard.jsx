@@ -5,12 +5,19 @@ import { Outlet } from 'react-router-dom';
 import DashNav from './DashNav';
 import DashSide from './DashSide';
 import DashFooter from './DashFooter';
+import { BsChatDotsFill } from 'react-icons/bs';
 
 const Dashboard = () => {
     const navigate = useNavigate()
     const EmailUser = secureLocalStorage.getItem("Login1");
     const RoleUser = secureLocalStorage.getItem("Login2");
 
+    const [chatOpen, SetchatOpen] = useState(false)
+
+    const headleOpenChat = () => {
+        SetchatOpen(true)
+    }
+    
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className=" w-full min-h-screen md:px-[5%] px-4">
@@ -22,8 +29,14 @@ const Dashboard = () => {
                     </div>
                     <div className="my-4 md:ml-4 w-full h-auto">                  
                         <Outlet />
-                        <button className="fixed bottom-6 right-8 p-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                            Click Me
+                        <button className="fixed bottom-6 right-8 p-3">
+                            {
+                                chatOpen === true ?
+                                    <div className=""></div>
+                                :
+                                    <BsChatDotsFill className='h-8 w-auto text-purple-500' onClick={headleOpenChat}/>    
+                            }
+                            
                         </button>
                     </div>                    
                 </div>
