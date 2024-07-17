@@ -158,23 +158,23 @@ const Settings = () => {
                                                 <form method="post" onSubmit={healeJFUpdate}>
                                                     <div className="md:grid grid-cols-2 gap-4">
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter First Name' 
+                                                            <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Enter First Name' 
                                                             onChange={e => SetjobFindeUpdate({...jobFindeUpdate, fname:e.target.value})}/>
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Last Name' 
+                                                            <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Enter Last Name' 
                                                             onChange={e => SetjobFindeUpdate({...jobFindeUpdate, lname:e.target.value})}/>
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' 
+                                                            <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Enter Job' 
                                                             onChange={e => SetjobFindeUpdate({...jobFindeUpdate, job:e.target.value})}/>
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Mobile Number' 
+                                                            <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Enter Mobile Number' 
                                                             onChange={e => SetjobFindeUpdate({...jobFindeUpdate, mobile:e.target.value})}/>
                                                         </div>
                                                         <div className="">
-                                                            <input type="text" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Address' 
+                                                            <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Enter Address' 
                                                             onChange={e => SetjobFindeUpdate({...jobFindeUpdate, address:e.target.value})}/>
                                                         </div>
                                                         {
@@ -182,7 +182,7 @@ const Settings = () => {
                                                                 if(JobFinderData.dob === null){
                                                                     return (
                                                                         <div className="">
-                                                                            <input type="date" name="" id="" className="md:my-0 my-2 h-12 w-full bg-gray-200 pl-2 rounded" placeholder='Enter Job' 
+                                                                            <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Enter Job' 
                                                                             onChange={e => SetjobFindeUpdate({...jobFindeUpdate, dob:e.target.value})}/>
                                                                             <p className="md:mb-0 mb-2">(Date of Birth)</p>
                                                                         </div>
@@ -213,6 +213,14 @@ const Settings = () => {
                                                 <div className="cursor-pointer text-purple-500" onClick={headleClose}>
                                                     <BsXCircleFill className='h-6 w-auto'/>
                                                 </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <form method="post">
+                                                    <input type="file" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required/>
+                                                    <div className="my-2">
+                                                        <button type="submit" className="bg-purple-500 text-white py-2 px-4 rounded shadow-md">Update Profile Image</button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     )
