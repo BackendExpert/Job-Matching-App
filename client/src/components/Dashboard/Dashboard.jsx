@@ -28,6 +28,17 @@ const Dashboard = () => {
         {id: 3, name: 'How to add Skills or Project'},
     ]
 
+    const ChatMenuData = [
+        {id: 1, name: 'How to Start a Company'},
+        {id: 2, name: 'How Find a Job'},
+        {id: 3, name: 'How to add Skills or Project'},
+    ]
+
+    const [MenuID, SetMenuID] = useState(false)
+    const headleStartChat = (id) => {
+        SetMenuID(id)
+    }
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className=" w-full min-h-screen md:px-[5%] px-4">
@@ -55,15 +66,24 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                                 <div className="text-purple-500 rounded shadow-md">
-                                    {
-                                        ChatMenu.map((menuChat, index) => {
-                                            return (
-                                                <div className="bg-white p-2 my-2 rounded w-full" key={index}>
-                                                    <p className="text-left text-sm">{menuChat.name}</p>
-                                                </div>
-                                            )
-                                        })
-                                    }
+                                    <div className="">
+                                        {
+                                            ChatMenu.map((menuChat, index) => {
+                                                return (
+                                                    <div className="bg-white p-2 my-2 rounded w-full" key={index} onClick={headleStartChat(menuChat.id)}>
+                                                        <p className="text-left text-sm">{menuChat.name}</p>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                    <div className="">
+                                        {
+                                            (() => {
+                                                if() 
+                                            })()
+                                        }
+                                    </div>
                                 </div>
                             </div>
                             
