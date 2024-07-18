@@ -400,19 +400,24 @@ const Settings = () => {
                                     <form method="post" onSubmit={headleAddEducation}>
                                         <div className="md:grid grid-cols-2 gap-4">
                                             <div className="">
-                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='School Name'/>
+                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='School Name'
+                                                onChange={e => SetAddeEducationData({...AddeEducationData, school:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Course Name'/>
+                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Course Name'
+                                                onChange={e => SetAddeEducationData({...AddeEducationData, course:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Class'/>
+                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Class'
+                                                onChange={e => SetAddeEducationData({...AddeEducationData, classCourese:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"/>
+                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required
+                                                onChange={e => SetAddeEducationData({...AddeEducationData, startDate:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"/>
+                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"
+                                                onChange={e => SetAddeEducationData({...AddeEducationData, endDate:e.target.value})}/>
                                             </div>
                                         </div>
                                         <div className="my-2">
