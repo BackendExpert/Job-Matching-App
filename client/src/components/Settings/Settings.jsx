@@ -384,8 +384,29 @@ const Settings = () => {
                             </div>
 
                             <div className="">
-                                <div className="bg-white p-4">
-                                    
+                                <div className="bg-white p-4 rounded">
+                                    <form method="post">
+                                        <div className="md:grid grid-cols-2 gap-4">
+                                            <div className="">
+                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='School Name'/>
+                                            </div>
+                                            <div className="">
+                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Course Name'/>
+                                            </div>
+                                            <div className="">
+                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Class'/>
+                                            </div>
+                                            <div className="">
+                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"/>
+                                            </div>
+                                            <div className="">
+                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"/>
+                                            </div>
+                                        </div>
+                                        <div className="my-2">
+                                            <button type="submit" className="bg-purple-500 text-white py-2 px-4 rounded">Add Education</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
