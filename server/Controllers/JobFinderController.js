@@ -95,7 +95,26 @@ const JobFinderController = {
     UpdateJFCV: async(req, res) => {
         try{
             const EmailID = req.params.id
-            console.log(req.file.path, EmailID)
+            // console.log(req.file.path, EmailID)
+            
+            const CVFile = req.file.path;
+
+            const UpdateCV = await JobFinder.findOneAndUpdate(
+                {email: EmailID},
+                {
+                    $set: {
+                        cv: CVFile
+                    }
+                },
+                { new: true }
+            )
+
+            if(UpdateCV){
+                return res.json({ Status: "Success"})
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }         
         }
         catch(err){
             console.log(err)
