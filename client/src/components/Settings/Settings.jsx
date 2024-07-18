@@ -408,7 +408,7 @@ const Settings = () => {
                             </div>                        
                         </div>  
                         <hr />
-                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 md:right-40 right-[-4px] bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0 mr-8' : 'transform translate-x-full mr-[-500px]'}`}>
+                        <div className={`md:max-w-[50%] max-w-[80%] fixed md:top-36 top-24 md:right-40 right-[-4px] bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0 mr-8' : 'transform translate-x-full mr-[-500px]'}`}>
                             <div className="flex justify-between">
                                 <h1 className="text-xl font-semibold flex mb-4">
                                     <BsBackpack2Fill className='h-6 w-auto mr-2'/>
@@ -424,23 +424,23 @@ const Settings = () => {
                                     <form method="post" onSubmit={headleAddEducation}>
                                         <div className="md:grid grid-cols-2 gap-4">
                                             <div className="">
-                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='School Name'
+                                                <input type="text" name="" id="" className="md:my-0 my-2 w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='School Name'
                                                 onChange={e => SetAddeEducationData({...AddeEducationData, school:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Course Name'
+                                                <input type="text" name="" id="" className="md:my-0 my-2 w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Course Name'
                                                 onChange={e => SetAddeEducationData({...AddeEducationData, course:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Class'
+                                                <input type="text" name="" id="" className="md:my-0 my-2 w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" placeholder='Class'
                                                 onChange={e => SetAddeEducationData({...AddeEducationData, classCourese:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required
+                                                <input type="date" name="" id="" className="md:my-0 my-2 w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required
                                                 onChange={e => SetAddeEducationData({...AddeEducationData, startDate:e.target.value})}/>
                                             </div>
                                             <div className="">
-                                                <input type="date" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"
+                                                <input type="date" name="" id="" className="md:my-0 my-2 w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white"
                                                 onChange={e => SetAddeEducationData({...AddeEducationData, endDate:e.target.value})}/>
                                             </div>
                                         </div>
