@@ -69,6 +69,13 @@ const DashNav = () => {
                 </div>
             </div>
         </div>
+        <div className={`${DropDown ? 'block' : 'hidden'} fixed z-10 max-w-40 md:right-24 right-6 bg-purple-200 border border-purple-500 text-purple-600 py-2 px-4 rounded mt-2`}>
+            <div className="flex">
+                <BsPower className='h-5 w-auto ml-2 text-purple-500'/>
+                <p className="">Logout</p>
+            </div>
+        </div>
+        
     </div>
   )
 }
