@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 const AuthRoute = require('./Routes/AuthRoute')
 const JobFinderRoute = require('./Routes/JobFinderRoute')
+const EducationRoute = require('./Routes/EducationRoute')
 
 const app = express();
 const PORT = process.env.PORT || 5000
@@ -23,7 +24,7 @@ app.use('/uploads', express.static('uploads'));
 
 app.use('/auth', AuthRoute)
 app.use('/jobfinder', JobFinderRoute)
-app.use('/Education')
+app.use('/Education', EducationRoute)
 
 app.listen(PORT, () => {
     console.log(`Server Running on PORT ${PORT}`)
