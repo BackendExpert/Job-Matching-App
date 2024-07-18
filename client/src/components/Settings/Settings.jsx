@@ -140,9 +140,11 @@ const Settings = () => {
 
     const OpenEduMode = () => {
         SetEduModel(true)
+        SetWorkModel(false)
     }   
     const OpenWorkMode = () => {
         SetWorkModel(true)
+        SetEduModel(false)
     }   
 
     const ModelClose = () => {
@@ -359,7 +361,7 @@ const Settings = () => {
                 </div>
 
                 <div className="md:grid grid-cols-2 gap-4">
-                    <div className="bg-white p-4 rounded shadow-md ">
+                    <div className="bg-white p-4 rounded shadow-md md:my-0 my-4">
                         <div className="flex justify-between">
                             <div className="text-purple-500 pl-2 flex pb-2">
                                 <BsBackpack2Fill className='h-6 w-auto pr-2'/>
@@ -370,7 +372,7 @@ const Settings = () => {
                             </div>                        
                         </div>  
                         <hr />
-                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 md:right-40 bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0' : 'transform translate-x-full mr-[-200px]'}`}>
+                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 md:right-40 right-[-4px] bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0 mr-8' : 'transform translate-x-full mr-[-500px]'}`}>
                             <div className="flex justify-between">
                                 <h1 className="text-xl font-semibold flex mb-4">
                                     <BsBackpack2Fill className='h-6 w-auto mr-2'/>
@@ -380,20 +382,35 @@ const Settings = () => {
                                     <BsXCircleFill className='h-6 w-auto pt-1'/>
                                 </p>
                             </div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae hic, eum consequuntur officiis vel alias error ea voluptates expedita magnam, exercitationem, dolor commodi aut ipsam in molestiae cumque nulla.
+
+                            <div className="">
+                                
+                            </div>
                         </div>
                     </div>
-                    <div className="bg-white p-4 rounded shadow-md ">
+                    <div className="bg-white p-4 rounded shadow-md md:my-0 my-4">
                         <div className="flex justify-between">
                             <div className="text-purple-500 pl-2 flex pb-2">
                                 <BsBuildingsFill className='h-6 w-auto pr-2'/>
-                                Working Experience
+                                Work Experience
                             </div>
                             <div className="text-purple-500 pl-2 flex pb-2">
                                 <button onClick={OpenWorkMode} className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Experience</button>
                             </div>                        
                         </div>  
                         <hr />
+                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 md:right-40 right-[-4px] bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${WorkModel ? 'transform translate-x-0 mr-8' : 'transform translate-x-full mr-[-500px]'}`}>
+                            <div className="flex justify-between">
+                                <h1 className="text-xl font-semibold flex mb-4">
+                                    <BsBuildingsFill className='h-6 w-auto mr-2'/>
+                                    Add Work Experience
+                                </h1>
+                                <p className="" onClick={ModelClose}>
+                                    <BsXCircleFill className='h-6 w-auto pt-1'/>
+                                </p>
+                            </div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae hic, eum consequuntur officiis vel alias error ea voluptates expedita magnam, exercitationem, dolor commodi aut ipsam in molestiae cumque nulla.
+                        </div>
                     </div>
                 </div>
             </div>
