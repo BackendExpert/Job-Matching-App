@@ -451,6 +451,39 @@ const Settings = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="">
+                            {
+                                getEdu.map((edu, index) => {
+                                    return (
+                                        <div key={index} className="bg-purple-200 py-2 px-3 rounded shadow-md my-2">
+                                            <p className="text-purple-600 font-semibold text-xl">{edu.school}</p>
+                                            <p className="">{edu.course}</p>
+                                            <p className="">{edu.classCourse}</p>
+                                            <div className="flex">
+                                                <p className="">{edu.startData}</p>
+                                                <p className="px-2">to</p> 
+                                                <p className="">
+                                                    {
+                                                        (() => {
+                                                            if(edu.endData === ""){
+                                                                return (
+                                                                    <div className="">Preset</div>
+                                                                )       
+                                                            }
+                                                            else{
+                                                                return (
+                                                                    <div className="">{edu.endData}</div>
+                                                                )       
+                                                            }
+                                                        })()
+                                                    }
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <div className="bg-white p-4 rounded shadow-md md:my-0 my-4">
                         <div className="flex justify-between">
