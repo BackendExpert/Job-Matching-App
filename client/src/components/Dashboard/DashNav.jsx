@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { BsBellFill, BsBriefcaseFill, BsCaretDownFill, BsCaretUpFill, BsMenuDown, BsPower } from 'react-icons/bs'
+import { BsBellFill, BsBriefcaseFill, BsBuilding, BsBuildingFill, BsCaretDownFill, BsCaretUpFill, BsMenuDown, BsPersonFill, BsPower } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import  secureLocalStorage  from  "react-secure-storage"
 
@@ -69,10 +69,19 @@ const DashNav = () => {
                 </div>
             </div>
         </div>
-        <div className={`${DropDown ? 'block' : 'hidden'} fixed z-10 max-w-40 md:right-24 right-6 bg-purple-200 border border-purple-500 text-purple-600 py-2 px-4 rounded mt-2`}>
-            <div className="flex">
-                <BsPower className='h-5 w-auto ml-2 text-purple-500'/>
-                <p className="">Logout</p>
+        <div className={`${DropDown ? 'block' : 'hidden'} fixed  max-w-48 md:right-24 right-6 bg-white border border-purple-500 text-purple-600 py-2 px-4 rounded mt-2`}>
+            <div className="flex py-2 cursor-pointer">                
+                <BsPersonFill className='h-5 w-auto text-purple-500'/>
+                <p className="ml-2">My Profile</p>
+            </div>
+            <div className="flex pt-2 pb-4 cursor-pointer">                
+                <BsBuildingFill className='h-5 w-auto text-purple-500'/>
+                <p className="ml-2">My Company</p>
+            </div>
+
+            <div className="flex py-2 cursor-pointer" onClick={logout}>                
+                <BsPower className='h-5 w-auto text-purple-500'/>
+                <p className="ml-2">Logout</p>
             </div>
         </div>
         
