@@ -160,8 +160,24 @@ const Settings = () => {
         endDate: ''
     })
 
-    const headleAddEducation = (e) => {
+    const headleAddEducation = async (e) => {
         e.preventDefault();
+
+        try{
+            const res = await axios.post(`http://localhost:5000/Education/AddNewEdu/${EmailUser}`, AddeEducationData)
+            .then(res => {
+                if(res.data.Status === "Success"){
+                    alert("New Education has been Added Successful")
+                    window.location.reload()
+                }
+                else{
+                    alert(res.data.Error)
+                }
+            })
+        }   
+        catch(err) {
+            console.log(err)
+        }
     }
 
     if(RoleUser !== null && EmailUser !== null){
