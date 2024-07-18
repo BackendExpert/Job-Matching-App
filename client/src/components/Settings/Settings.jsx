@@ -384,7 +384,9 @@ const Settings = () => {
                             </div>
 
                             <div className="">
-                                
+                                <div className="bg-white p-4">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
