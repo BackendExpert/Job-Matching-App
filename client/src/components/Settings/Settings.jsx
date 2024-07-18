@@ -138,8 +138,12 @@ const Settings = () => {
     const [EduModel, SetEduModel] = useState(false)
     const [WorkModel, SetWorkModel] = useState(false)
 
-    
-    
+    const OpenEduMode = () => {
+
+    }   
+    const OpenWorkMode = () => {
+        
+    }   
 
     if(RoleUser !== null && EmailUser !== null){
         return (
@@ -357,7 +361,7 @@ const Settings = () => {
                                 Education
                             </div>
                             <div className="text-purple-500 pl-2 flex pb-2">
-                                <button className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Education</button>
+                                <button onClick={OpenEduMode} className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Education</button>
                             </div>                        
                         </div>  
                         <hr />
