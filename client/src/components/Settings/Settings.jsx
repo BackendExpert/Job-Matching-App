@@ -180,6 +180,14 @@ const Settings = () => {
         }
     }
 
+    const [getEdu, SetgetEdu] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/Education/getEducation/${EmailUser}`)
+        .then(res => SetgetEdu(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className="">
