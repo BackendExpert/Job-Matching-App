@@ -152,6 +152,18 @@ const Settings = () => {
         SetWorkModel(false)
     }
 
+    const [AddeEducationData, SetAddeEducationData] = useState({
+        school: '',
+        course: '',
+        classCourese: '',
+        startDate: '',
+        endDate: ''
+    })
+
+    const headleAddEducation = (e) => {
+        e.preventDefault();
+    }
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className="">
@@ -385,7 +397,7 @@ const Settings = () => {
 
                             <div className="">
                                 <div className="bg-white p-4 rounded">
-                                    <form method="post">
+                                    <form method="post" onSubmit={headleAddEducation}>
                                         <div className="md:grid grid-cols-2 gap-4">
                                             <div className="">
                                                 <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required placeholder='School Name'/>
