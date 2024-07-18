@@ -100,6 +100,13 @@ const Settings = () => {
         }
     }
 
+    // add cv
+    const [AddCV, SetAddCV] = useState({
+        myCV: ''
+    })
+
+    
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className="">
@@ -278,7 +285,7 @@ const Settings = () => {
                         <p className="text-gray-500 p-4">Add CV Here</p>
 
                         <form method="post">
-                            
+                            <input type="file" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" />
                         </form>
                     </div>
                 </div>
