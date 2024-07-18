@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import MyImg from '../../assets/file.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsFileEarmarkPersonFill, BsImage, BsPen, BsPersonLinesFill, BsXCircleFill } from 'react-icons/bs';
+import { BsBackpack2Fill, BsBuildingsFill, BsFileEarmarkPersonFill, BsImage, BsPen, BsPersonLinesFill, BsXCircleFill } from 'react-icons/bs';
 import axios from 'axios';
 
 const Settings = () => {
@@ -133,6 +133,13 @@ const Settings = () => {
         }
         
     }
+
+    // open model add education and exprence
+    const [EduModel, SetEduModel] = useState(false)
+    const [WorkModel, SetWorkModel] = useState(false)
+
+    
+    
 
     if(RoleUser !== null && EmailUser !== null){
         return (
@@ -339,6 +346,33 @@ const Settings = () => {
                                 <button type="submit" className="bg-purple-500 text-white py-2 px-4 rounded">Update CV</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+
+                <div className="md:grid grid-cols-2 gap-4">
+                    <div className="bg-white p-4 rounded shadow-md ">
+                        <div className="flex justify-between">
+                            <div className="text-purple-500 pl-2 flex pb-2">
+                                <BsBackpack2Fill className='h-6 w-auto pr-2'/>
+                                Education
+                            </div>
+                            <div className="text-purple-500 pl-2 flex pb-2">
+                                <button className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Education</button>
+                            </div>                        
+                        </div>  
+                        <hr />
+                    </div>
+                    <div className="bg-white p-4 rounded shadow-md ">
+                        <div className="flex justify-between">
+                            <div className="text-purple-500 pl-2 flex pb-2">
+                                <BsBuildingsFill className='h-6 w-auto pr-2'/>
+                                Working Experience
+                            </div>
+                            <div className="text-purple-500 pl-2 flex pb-2">
+                                <button className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Experience</button>
+                            </div>                        
+                        </div>  
+                        <hr />
                     </div>
                 </div>
             </div>
