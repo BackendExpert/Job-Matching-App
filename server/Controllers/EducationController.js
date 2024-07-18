@@ -14,6 +14,7 @@ const EducationController = {
             } = req.body
 
             const AddEduNew = new Education({
+                email: EmailId,
                 school: school,
                 course: course,
                 classCourse: classCourese,
