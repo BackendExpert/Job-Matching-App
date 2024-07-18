@@ -6,7 +6,23 @@ const EducationSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-
+    school: {
+        type: String,
+        required: true,
+    },
+    course: {
+        type: String,
+    },
+    classCourse: {
+        type: String,
+    },
+    startData: {
+        type: String,
+        required: true,
+    },
+    endData: {
+        type: String
+    }
 })
 
 const Education = mongoose.model('Education', EducationSchema)
