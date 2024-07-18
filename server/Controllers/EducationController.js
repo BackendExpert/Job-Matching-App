@@ -34,6 +34,23 @@ const EducationController = {
         catch(err){
             console.log(err)
         }
+    },
+    GetEducationJF: async (req, res) => {
+        try{
+            const EmailID = req.params.id
+
+            const GetEdu = await Education.find({ email: EmailID })
+
+            if(GetEdu){
+                return res.json({ Result: GetEdu })
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 }
 
