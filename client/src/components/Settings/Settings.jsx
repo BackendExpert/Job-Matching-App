@@ -105,7 +105,34 @@ const Settings = () => {
         myCV: ''
     })
 
+    const headleAddCV = async (e) => {
+        e.preventDefault();
 
+        const CVData = new FormData()
+
+        CVData.append('myCV', AddCV.myCV);
+
+        try{
+            const res = await axios.post(`http://localhost:5000/jobfinder/AddCV/${EmailUser}`, CVData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                }
+            })
+            .then(res => {
+                if(res.data.Status === "Success"){
+                    alert("CV Updated Successful")
+                    window.location.reload()
+                }
+                else{
+                    alert(res.data.Error)
+                }
+            })
+        }
+        catch(err){
+            console.log(err)
+        }
+        
+    }
 
     if(RoleUser !== null && EmailUser !== null){
         return (
@@ -284,8 +311,8 @@ const Settings = () => {
                     <div className="">                        
                         <p className="text-gray-500 p-4">Add CV Here</p>
 
-                        <form method="post">
-                            <input type="file" name="" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" 
+                        <form method="post" onSubmit={headleAddCV}>
+                            <input type="file" name="myCV" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" 
                             onChange={e => SetAddCV({...AddCV, myCV:e.target.files[0]})}/>
                         </form>
                     </div>
