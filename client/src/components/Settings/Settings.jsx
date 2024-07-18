@@ -365,7 +365,7 @@ const Settings = () => {
                             </div>                        
                         </div>  
                         <hr />
-                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 right-40 bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0' : 'transform translate-x-full mr-[-20px]'}`}>
+                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 md:right-40 bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0' : 'transform translate-x-full mr-[-20px]'}`}>
                             <div className="flex justify-between">
                                 <h1 className="text-xl font-semibold flex mb-4">
                                     <BsBackpack2Fill className='h-6 w-auto mr-2'/>
