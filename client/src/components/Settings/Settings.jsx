@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import MyImg from '../../assets/file.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsImage, BsPen, BsXCircleFill } from 'react-icons/bs';
+import { BsImage, BsPen, BsPersonLinesFill, BsXCircleFill } from 'react-icons/bs';
 import axios from 'axios';
 
 const Settings = () => {
@@ -108,7 +108,10 @@ const Settings = () => {
                     <hr  className='py-2'/>
             
                     <div className="my-4">
-                        <h1 className="text-purple-500">Personal Data</h1>
+                        <h1 className="text-purple-500 flex">
+                            <BsPersonLinesFill className='h-6 w-auto pr-2'/>
+                            Personal Data
+                        </h1>
                         <hr className='pb-4'/>
                         <div className="md:flex">
                             {
@@ -268,6 +271,10 @@ const Settings = () => {
                 <div className="bg-white my-4 py-4 px-4 rounded shadow-md">
                     <div className="text-purple-500 pl-2">My CV</div>
                     <hr />
+                    <div className="">
+                        
+                        <p className="">Add CV Here</p>
+                    </div>
                 </div>
             </div>
         )
