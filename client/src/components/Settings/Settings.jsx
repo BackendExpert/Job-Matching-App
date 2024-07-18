@@ -286,6 +286,7 @@ const Settings = () => {
                                                     </div>
                                                 </div>
                                                 <div className="my-4">
+
                                                     <form method="post" onSubmit={headleUploadProfileImg}>
                                                         <input type="file" name="image" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required
                                                         onChange={e => SetProfileImg({...ProfileImg, image:e.target.files[0]})}/>
@@ -309,8 +310,27 @@ const Settings = () => {
                     </div>
                     <hr />
                     <div className="">                        
-                        <p className="text-gray-500 p-4">Add CV Here</p>
-
+                    {
+                        (() => {
+                            if(JobFinderData.cv === ""){
+                                return (
+                                    <div className="my-2">
+                                        <p className="">You not Added any CV</p>
+                                     </div>
+                                )   
+                            }
+                             else{
+                                return (
+                                    <div className="mt-2 mb-4">
+                                        <p className="">You Already Added CV</p>
+                                        <a href={'http://localhost:5000/' + JobFinderData.cv} target='_blank'>
+                                            <button className="bg-purple-500 text-white rounded py-1 px-4">Download CV</button>
+                                        </a>
+                                    </div>
+                                )
+                             }
+                        })()
+                    }
                         <form method="post" onSubmit={headleAddCV}>
                             <input type="file" name="myCV" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" 
                             onChange={e => SetAddCV({...AddCV, myCV:e.target.files[0]})}/>
