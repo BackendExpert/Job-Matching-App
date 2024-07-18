@@ -332,7 +332,7 @@ const Settings = () => {
                         })()
                     }
                         <form method="post" onSubmit={headleAddCV}>
-                            <input type="file" name="myCV" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" 
+                            <input type="file" name="myCV" id="" className="w-full h-12 pl-2 rounded bg-purple-300 text-purple-800 placeholder-white" required 
                             onChange={e => SetAddCV({...AddCV, myCV:e.target.files[0]})}/>
 
                             <div className="mt-2">
