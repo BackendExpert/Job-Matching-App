@@ -120,7 +120,6 @@ const JobFinderController = {
             console.log(err)
         }
     }
-
 }
 
 module.exports = JobFinderController
