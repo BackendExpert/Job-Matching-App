@@ -139,10 +139,10 @@ const Settings = () => {
     const [WorkModel, SetWorkModel] = useState(false)
 
     const OpenEduMode = () => {
-
+        SetEduModel(true)
     }   
     const OpenWorkMode = () => {
-        
+        SetWorkModel(true)
     }   
 
     if(RoleUser !== null && EmailUser !== null){
@@ -365,6 +365,18 @@ const Settings = () => {
                             </div>                        
                         </div>  
                         <hr />
+                        <div className={`md:max-w-[50%] max-w-[80%] fixed top-36 right-40 bg-purple-800 text-white p-6 rounded-lg transition-transform duration-300 ${EduModel ? 'transform translate-x-0' : 'transform translate-x-full mr-[-20px]'}`}>
+                            <div className="flex justify-between">
+                                <h1 className="text-xl font-semibold flex mb-4">
+                                    <BsBackpack2Fill className='h-6 w-auto mr-2'/>
+                                    Add New Education
+                                </h1>
+                                <p className="">
+                                    <BsXCircleFill className='h-6 w-auto pt-1'/>
+                                </p>
+                            </div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae hic, eum consequuntur officiis vel alias error ea voluptates expedita magnam, exercitationem, dolor commodi aut ipsam in molestiae cumque nulla.
+                        </div>
                     </div>
                     <div className="bg-white p-4 rounded shadow-md ">
                         <div className="flex justify-between">
@@ -373,7 +385,7 @@ const Settings = () => {
                                 Working Experience
                             </div>
                             <div className="text-purple-500 pl-2 flex pb-2">
-                                <button className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Experience</button>
+                                <button onClick={OpenWorkMode} className="bg-purple-500 text-white py-1 px-4 rounded shadow-md">Add Experience</button>
                             </div>                        
                         </div>  
                         <hr />
