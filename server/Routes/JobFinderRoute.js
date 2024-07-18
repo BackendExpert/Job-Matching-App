@@ -19,5 +19,6 @@ const upload = multer({ storage });
 router.get('/GetJFData/:id', JobFinderController.GetDataJF)
 router.post('/UpdateJFData/:id', JobFinderController.JobFinderUpdate)
 router.post('/UploadProfileImg/:id', upload.single('image'), JobFinderController.ProfileImgUpdate)
+router.post('/AddCV/:id', upload.single('myCV'), JobFinderController.UpdateJFCV)
 
 module.exports = router

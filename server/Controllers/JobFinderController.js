@@ -90,6 +90,16 @@ const JobFinderController = {
         catch(err){
             console.log(err)
         }
+    },
+
+    UpdateJFCV: async(req, res) => {
+        try{
+            const EmailID = req.params.id
+            console.log(req.file.path, EmailID)
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 
 }
