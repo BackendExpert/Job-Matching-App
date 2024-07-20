@@ -17,6 +17,10 @@ const DashHome = () => {
     {id: 3, name: "Job Match", icon: <BsUiChecks />, value: <CountUp end={20}/>, bgColor: 'bg-purple-500'},
     {id: 4, name: "Companies", icon: <BsBuildingFill />, value: <CountUp end={20}/>, bgColor: 'bg-purple-500'},
   ]
+
+  const headleStartCompany = () => {
+
+  }
   
   if(RoleUser !== null && EmailUser !== null){
     return (
@@ -55,10 +59,20 @@ const DashHome = () => {
                 <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Poster</h1>
                 <p className="text-purple-500">Start Your own Company here</p>
                 <div className="mt-4">
-                  <button className='bg-purple-500 text-white py-2 px-4 rounded '>Start Company</button>
+                  <button className='bg-purple-500 text-white py-2 px-4 rounded' onClick={headleStartCompany}>Start Company</button>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="bg-white p-4 my-4 rounded shadow-md">
+            <h1 className="text-gray-500 text-xl font-semibold">Start Company</h1>
+            <hr />
+            <form method="post">
+              <div className="md:grid grid-cols-2 gap-4">
+                <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Name'/>
+                <input type="email" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Email'/>
+              </div>
+            </form>
           </div>
         </div>
       </div>
