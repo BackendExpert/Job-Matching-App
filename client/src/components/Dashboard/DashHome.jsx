@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import  secureLocalStorage  from  "react-secure-storage"
 import { Link, useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
@@ -18,8 +18,10 @@ const DashHome = () => {
     {id: 4, name: "Companies", icon: <BsBuildingFill />, value: <CountUp end={20}/>, bgColor: 'bg-purple-500'},
   ]
 
-  const headleStartCompany = () => {
+  const [StartCompanyClicked, SetStartCompanyClicked] = useState(false)
 
+  const headleStartCompany = () => {
+    SetStartCompanyClicked(true)
   }
   
   if(RoleUser !== null && EmailUser !== null){
