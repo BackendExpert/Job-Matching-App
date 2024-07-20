@@ -50,8 +50,14 @@ const DashHome = () => {
             }
           </div>
         </div>
-        <div className="md:grid grid-cols-2 gap-4">
-          <div className="bg-white py-2 px-2 my-4 shadow-md rounded">
+        <div className="md:grid grid-cols-2 gap-2">
+          <div className="bg-white py-2 px-2 mt-4 mb-2 shadow-md rounded">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque officia minus perferendis assumenda id animi eligendi repellat accusamus veritatis fuga dolor, ipsum corrupti suscipit ratione numquam quibusdam eaque sit aspernatur!
+          </div>
+          <div className="bg-white py-2 px-2 mt-4 mb-2 shadow-md rounded">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque officia minus perferendis assumenda id animi eligendi repellat accusamus veritatis fuga dolor, ipsum corrupti suscipit ratione numquam quibusdam eaque sit aspernatur!
+          </div>
+          <div className="bg-white px-2 shadow-md rounded">
             <div className="md:flex md:text-left text-center md:pb-0 pb-4">
               <div class="md:hidden w-full flex justify-center">
                 <img src={JobPosterImg} alt="" className='h-64 w-auto'/>
@@ -66,7 +72,14 @@ const DashHome = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white p-4 my-4 rounded shadow-md">
+          {
+            (() => {
+              if(StartCompanyClicked === true){
+
+              }
+            })()
+          }
+          <div className="bg-white p-4 rounded shadow-md">
             <h1 className="text-gray-500 text-xl font-semibold">Start Company</h1>
             <hr />
             <form method="post">
@@ -81,6 +94,7 @@ const DashHome = () => {
               </div>
             </form>
           </div>
+
         </div>
       </div>
     )
