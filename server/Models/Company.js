@@ -20,7 +20,10 @@ const CompanySchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-  }
+  },
+  image: {
+    type: String,
+  },
 });
 
 const Company = mongoose.model('Company', CompanySchema);
