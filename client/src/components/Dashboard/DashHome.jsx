@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import  secureLocalStorage  from  "react-secure-storage"
 import { Link, useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
-import { BsBackpack2, BsBagCheckFill, BsBriefcaseFill, BsBuildingFill, BsUiChecks } from 'react-icons/bs';
+import { BsBackpack2, BsBagCheckFill, BsBriefcaseFill, BsBuildingFill, BsUiChecks, BsXCircle, BsXCircleFill } from 'react-icons/bs';
 import JobPosterImg from '../../assets/programmer.png'
 import JobFind from '../../assets/lap.png'
 
@@ -51,10 +51,10 @@ const DashHome = () => {
           </div>
         </div>
         <div className="md:grid grid-cols-2 gap-2">
-          <div className="bg-white py-2 px-2 mt-4 mb-2 shadow-md rounded">
+          <div className="bg-white mt-4 mb-2 p-4 shadow-md rounded">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque officia minus perferendis assumenda id animi eligendi repellat accusamus veritatis fuga dolor, ipsum corrupti suscipit ratione numquam quibusdam eaque sit aspernatur!
           </div>
-          <div className="bg-white py-2 px-2 mt-4 mb-2 shadow-md rounded">
+          <div className="bg-white mt-4 mb-2 p-4 shadow-md rounded">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque officia minus perferendis assumenda id animi eligendi repellat accusamus veritatis fuga dolor, ipsum corrupti suscipit ratione numquam quibusdam eaque sit aspernatur!
           </div>
           <div className="bg-white px-2 shadow-md rounded">
@@ -75,26 +75,29 @@ const DashHome = () => {
           {
             (() => {
               if(StartCompanyClicked === true){
-
+                return (
+                  <div className="bg-white p-4 rounded shadow-md">
+                    <div className="flex justify-between">
+                      <h1 className="text-gray-500 text-xl font-semibold">Start Company</h1>
+                      <BsXCircleFill className='h-6 w-auto text-purple-500 cursor-pointer' onClick={headleCloseComp}/>
+                    </div>
+                    <hr />
+                    <form method="post">
+                      <div className="md:grid grid-cols-2 gap-4">
+                        <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Name'/>
+                        <input type="email" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Email'/>
+                      </div>
+                      <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" placeholder='Company Address'/>
+                      <div className="md:grid grid-cols-2 gap-4">
+                        <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Mobile'/>
+                        <button type="submit" className="bg-purple-500 text-white h-12 px-4 my-2 rounded">Start Company</button>
+                      </div>
+                    </form>
+                  </div>
+                )
               }
             })()
           }
-          <div className="bg-white p-4 rounded shadow-md">
-            <h1 className="text-gray-500 text-xl font-semibold">Start Company</h1>
-            <hr />
-            <form method="post">
-              <div className="md:grid grid-cols-2 gap-4">
-                <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Name'/>
-                <input type="email" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Email'/>
-              </div>
-              <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" placeholder='Company Address'/>
-              <div className="md:grid grid-cols-2 gap-4">
-                <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Mobile'/>
-                <button type="submit" className="bg-purple-500 text-white h-12 px-4 my-2 rounded">Start Company</button>
-              </div>
-            </form>
-          </div>
-
         </div>
       </div>
     )
