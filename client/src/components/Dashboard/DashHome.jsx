@@ -34,6 +34,10 @@ const DashHome = () => {
     comAddress: '',
     comMobile: ''
   })
+
+  const headleCreateCom = (e) => {
+    e.preventDefault();
+  }
   
   if(RoleUser !== null && EmailUser !== null){
     return (
@@ -93,14 +97,22 @@ const DashHome = () => {
                       <BsXCircleFill className='h-6 w-auto text-purple-500 cursor-pointer' onClick={headleCloseComp}/>
                     </div>
                     <hr />
-                    <form method="post">
+                    <form method="post" onSubmit={headleCreateCom}>
                       <div className="md:grid grid-cols-2 gap-4">
-                        <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Name'/>
-                        <input type="email" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Email'/>
+                        <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Name'
+                        onChange={e => SetCompanyData({...CompanyData, comName:e.target.value})}/>
+                        
+                        <input type="email" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Email'
+                        onChange={e => SetCompanyData({...CompanyData, comEmail:e.target.value})}/>
+                        
                       </div>
-                      <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" placeholder='Company Address'/>
+                      <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" placeholder='Company Address'
+                      onChange={e => SetCompanyData({...CompanyData, comAddress:e.target.value})}/>
+                      
                       <div className="md:grid grid-cols-2 gap-4">
-                        <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Mobile'/>
+                        <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Mobile'
+                        onChange={e => SetCompanyData({...CompanyData, comMobile:e.target.value})}/>
+                        
                         <button type="submit" className="bg-purple-500 text-white h-12 px-4 my-2 rounded">Start Company</button>
                       </div>
                     </form>
