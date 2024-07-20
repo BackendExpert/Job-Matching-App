@@ -72,6 +72,11 @@ const DashHome = () => {
                 <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Name'/>
                 <input type="email" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Email'/>
               </div>
+              <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" placeholder='Company Address'/>
+              <div className="md:grid grid-cols-2 gap-4">
+                <input type="text" name="" id="" className="bg-purple-200 placeholder-purple pl-2 rounded h-12 rounded my-2 w-full text-purple-500" required placeholder='Company Mobile'/>
+                <button type="submit" className="bg-purple-500 text-white h-12 px-4 my-2 rounded">Start Company</button>
+              </div>
             </form>
           </div>
         </div>
