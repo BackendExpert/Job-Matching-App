@@ -23,6 +23,17 @@ const DashHome = () => {
   const headleStartCompany = () => {
     SetStartCompanyClicked(true)
   }
+
+  const headleCloseComp = () => {
+    SetStartCompanyClicked(false)
+  }
+
+  const [CompanyData, SetCompanyData] = useState({
+    comName: '',
+    comEmail: '',
+    comAddress: '',
+    comMobile: ''
+  })
   
   if(RoleUser !== null && EmailUser !== null){
     return (
