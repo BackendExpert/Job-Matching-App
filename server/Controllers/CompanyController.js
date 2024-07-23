@@ -14,7 +14,38 @@ const CompanyController = {
                 comMobile,
             } = req.body
 
-            const CheckCompany = await Company.findOne()
+            const query = {
+                $or: [
+                  { Owner: EmailID },
+                  { comEmail: comEmail },
+                  { comName: comName }
+                ]
+              };
+
+            const CheckCompany = await Company.findOne(query)
+
+            if(CheckCompany){
+                const CompanyCreate = new Company({
+                    comName: comName,
+                    comEmail: comEmail,
+                    comAddress: comAddress,
+                    comMobile: comMobile,
+                    Owner: EmailID
+                })
+
+                const ResultCompany = await CompanyCreate.save()
+
+                if(ResultCompany){
+                    return res.json({ Status: "Success"})
+                }
+                else{
+                    return res.json({ Error: "Internal Server Error while creating Company"})
+                }
+
+            }
+            else{
+                return  res.json({ Error: "Internal Server Error"})
+            }
 
         } 
         catch (err) {
