@@ -55,6 +55,15 @@ const DashHome = () => {
       console.log(err)
     }
   }
+
+  // check user have comapany
+  const [HaveCompany, SetHaveCompany] = useState([])
+
+  useEffect(() => {
+    axios.get(`http://localhost:5000/company/UserCompany/${EmailUser}`)
+    .then(res => SetHaveCompany(res.data.Result))
+    .catch(err => console.log(err))
+  }, [])
   
   if(RoleUser !== null && EmailUser !== null){
     return (
