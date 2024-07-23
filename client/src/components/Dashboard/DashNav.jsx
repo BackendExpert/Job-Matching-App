@@ -30,6 +30,9 @@ const DashNav = () => {
         SetDropDown(!DropDown)
     }
 
+    // view Comapany
+    const []
+
   return (
     <div className="pt-6">
         <div className='bg-white py-4 px-8 rounded shadow-md'>
