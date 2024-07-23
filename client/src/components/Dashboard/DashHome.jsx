@@ -98,21 +98,34 @@ const DashHome = () => {
           <div className="bg-white mt-4 mb-2 p-4 shadow-md rounded">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque officia minus perferendis assumenda id animi eligendi repellat accusamus veritatis fuga dolor, ipsum corrupti suscipit ratione numquam quibusdam eaque sit aspernatur!
           </div>
-          <div className="bg-white px-2 shadow-md rounded">
-            <div className="md:flex md:text-left text-center md:pb-0 pb-4">
-              <div class="md:hidden w-full flex justify-center">
-                <img src={JobPosterImg} alt="" className='h-64 w-auto'/>
-              </div>
-              <img src={JobPosterImg} alt="" className='h-[50%] w-auto md:block hidden'/>
-              <div className="">
-                <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Poster</h1>
-                <p className="text-purple-500">Start Your own Company here</p>
-                <div className="mt-4">
-                  <button className='bg-purple-500 text-white py-2 px-4 rounded' onClick={headleStartCompany}>Start Company</button>
-                </div>
-              </div>
-            </div>
-          </div>
+            {
+              (() => {
+                if(HaveCompany.Owner === EmailUser){
+                  return (
+                    <div className=""></div>
+                  )
+                }
+                else{
+                  return (
+                    <div className="bg-white px-2 shadow-md rounded">
+                      <div className="md:flex md:text-left text-center md:pb-0 pb-4">
+                        <div class="md:hidden w-full flex justify-center">
+                          <img src={JobPosterImg} alt="" className='h-64 w-auto'/>
+                        </div>
+                        <img src={JobPosterImg} alt="" className='h-[50%] w-auto md:block hidden'/>
+                        <div className="">
+                          <h1 className="text-purple-500 text-2xl font-semibold md:pt-10 pt-2">Be a Poster</h1>
+                          <p className="text-purple-500">Start Your own Company here</p>
+                          <div className="mt-4">
+                            <button className='bg-purple-500 text-white py-2 px-4 rounded' onClick={headleStartCompany}>Start Company</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                }
+              })
+            }
           {
             (() => {
               if(StartCompanyClicked === true){
