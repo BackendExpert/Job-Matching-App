@@ -25,6 +25,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/auth', AuthRoute)
 app.use('/jobfinder', JobFinderRoute)
 app.use('/Education', EducationRoute)
+app.use('/CreateCompany')
 
 app.listen(PORT, () => {
     console.log(`Server Running on PORT ${PORT}`)
