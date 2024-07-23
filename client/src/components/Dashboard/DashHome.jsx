@@ -5,6 +5,7 @@ import CountUp from 'react-countup';
 import { BsBackpack2, BsBagCheckFill, BsBriefcaseFill, BsBuildingFill, BsUiChecks, BsXCircle, BsXCircleFill } from 'react-icons/bs';
 import JobPosterImg from '../../assets/programmer.png'
 import JobFind from '../../assets/lap.png'
+import axios from 'axios';
 
 const DashHome = () => {
   const navigate = useNavigate()
@@ -35,8 +36,24 @@ const DashHome = () => {
     comMobile: ''
   })
 
-  const headleCreateCom = (e) => {
+  const headleCreateCom = async(e) => {
     e.preventDefault();
+
+    try{
+      const res = await axios.post(`http://localhost:5000/company/CreateCompany/${EmailUser}`, CompanyData)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Company Created Successfull")
+          window.location.reload()
+        } 
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+    catch(err) {
+      console.log(err)
+    }
   }
   
   if(RoleUser !== null && EmailUser !== null){
