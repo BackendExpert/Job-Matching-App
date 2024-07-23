@@ -14,7 +14,8 @@ const CompanyController = {
                 comMobile,
             } = req.body
 
-            
+            const CheckCompany = await Company.findOne()
+
         } 
         catch (err) {
             console.log(err);
