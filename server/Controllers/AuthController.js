@@ -9,7 +9,7 @@ const AuthController = {
             const {username, email, password} = req.body
 
             const chechuser = await User.findOne({
-                $and: [
+                $or: [
                     {username: username},
                     {email: email}
                 ]
